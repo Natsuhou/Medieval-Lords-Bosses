@@ -1,0 +1,223 @@
+BansheeSpine:
+  Id: 276
+#  Data:
+  Display: '&bBanshee Spine'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DAMAGE_ALL:8
+  - LOOT_BONUS_MOBS:4
+  Lore: 
+  - '&fIt writhes in your hand...'
+#  PotionEffects:
+#  BannerLayers:
+BansheeHarp:
+  Id: 261
+#  Data:
+  Display: "&bBanshee's Harp"
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - ARROW_DAMAGE:7
+  - ARROW_FIRE:1
+  - ARROW_INFINITE:1
+  Lore:
+  - '&fDo you hear the scream too?'
+#  PotionEffects:
+#  BannerLayers:
+BansheeHelm:
+  Id: 310
+#  Data:
+  Display: '&bGhostly Helm'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DURABILITY:10
+  - PROTECTION_ENVIRONMENTAL:2
+  Lore:
+  - '&fDid it get &lchilly...'
+  - '&for is it just me?'
+#  PotionEffects:
+#  BannerLayers:
+BansheeChest:
+  Id: 311
+#  Data:
+  Display: '&bGhostly Chestplate'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DURABILITY:10
+  - PROTECTION_ENVIRONMENTAL:2
+  - THORNS:3
+  Lore:
+  - '&fDid it get &lchilly...'
+  - '&for is it just me?'
+#  PotionEffects:
+#  BannerLayers:
+BansheeLegs:
+  Id: 312
+#  Data:
+  Display: '&bGhostly Leggings'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DURABILITY:10
+  - PROTECTION_ENVIRONMENTAL:2
+  - THORNS:2
+  Lore:
+  - '&fDid it get &lchilly...'
+  - '&for is it just me?'
+#  PotionEffects:
+#  BannerLayers:
+BansheeBoots:
+  Id: 313
+#  Data:
+  Display: '&bGhostly Boots'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DURABILITY:10
+  - PROTECTION_ENVIRONMENTAL:2
+  Lore:
+  - '&fDid it get &lchilly...'
+  - '&for is it just me?'
+#  PotionEffects:
+#  BannerLayers:
+SpiderVenom:
+  Id: 373
+  Data: 16427
+  Display: '&aSpider Venom'
+#  Attributes:
+  Amount: 3
+#  Options:
+#  Enchantments:
+  Lore:
+  - '&4&lWARNING &r&fExtremely Potent!'
+  PotionEffects:
+  - blindness 300 3
+  - poison 300 3
+  - slow 300 3
+  - confusion 300 3
+  - hunger 300 3
+  - weakness 300 3
+#  BannerLayers:
+#--------------------------------------------------#
+Shank:
+  Id: 318
+#  Data:
+  Display: '&eShank'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DAMAGE_ALL:7
+  - DAMAGE_ARTHROPODS:4
+  Lore:
+  - "&5Confiscated from inmate 85-AZ"
+#  PotionEffects:
+#  BannerLayers:
+#--------------------------------------------------#
+NecromancerChest:
+  Id: 299
+#  Data:
+  Display: "&5Necromancer's Chest"
+#  Attributes:
+  Amount: 1
+  Options:
+    Color: 170,0,170
+    Unbreakable: true
+#  Enchantments:
+#  Lore:
+#  PotionEffects:
+#  BannerLayers:
+NecromancerLegs:
+  Id: 300
+#  Data:
+  Display: "&5Necromancer's Legs"
+#  Attributes:
+  Amount: 1
+  Options:
+    Color: 170,0,170
+    Unbreakable: true
+#  Enchantments:
+#  Lore:
+#  PotionEffects:
+#  BannerLayers:
+MagicalRod:
+  Id: 369
+#  Data:
+  Display: '&eMagical Rod'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DAMAGE_ALL:4
+  - FIRE_ASPECT:3
+  Lore:
+  - "&5The power radiating from within is immense!"
+#  PotionEffects:
+#  BannerLayers:
+Disemboweler:
+  Id: 292
+#  Data:
+  Display: '&5Disemboweler'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DAMAGE_ALL:5
+  - KNOCKBACK:1
+  Lore:
+  - "&5The metal is stained..."
+#  PotionEffects:
+#  BannerLayers:
+BanditHoe:
+  Id: 291
+  Data: 3
+  Display: "&5Bandit Staff"
+#  Attributes:
+  Amount: 1
+  Options:
+  Enchantments:
+  - DAMAGE_ALL:8
+  - FIRE_ASPECT:3
+  - KNOCKBACK:2
+#  Lore:
+#  PotionEffects:
+#  BannerLayers:
+#--------------------------------------------------#
+ColdBloodLegs:
+  Id: 300
+#  Data:
+  Display: "&5Edgar's Pants"
+#  Attributes:
+  Amount: 1
+  Options:
+    Color: 170,0,0
+    Unbreakable: true
+#  Enchantments:
+#  Lore:
+#  PotionEffects:
+#  BannerLayers:
+EdgarAxe:
+  Id: 258
+#  Data:
+  Display: '&5Edgars Axe'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DAMAGE_ALL:4
+  - FIRE_ASPECT:2
+  - KNOCKBACK:1
+  Lore:
+  - "&5Found in the skull of a victim."
+#  PotionEffects:
+#  BannerLayers:
+#--------------------------------------------------#

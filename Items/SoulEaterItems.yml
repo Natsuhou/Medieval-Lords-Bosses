@@ -1,0 +1,31 @@
+SoulHelmet:
+  Id: 298
+  Data: 0
+  Options:
+    Color: 128,128,128
+  Enchantments:
+  - DURABILITY:5
+SoulChestplate:
+  Id: 299
+  Data: 0
+  Options:
+    Color: 128,128,128
+  Enchantments:
+  - DURABILITY:5
+SoulLeggings:
+  Id: 300
+  Data: 2
+  Options:
+    Color: 128,128,128
+  Enchantments:
+  - DURABILITY:5
+SoulBoots:
+  Id: 301
+  Data: 0
+  Options:
+    Color: 128,128,128
+  Enchantments:
+  - DURABILITY:5
+DeathSpite:
+  Id: 406
+  Display: 'deathSpite'

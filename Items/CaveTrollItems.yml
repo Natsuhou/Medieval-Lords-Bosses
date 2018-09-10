@@ -1,0 +1,11 @@
+CaveTrollStaff:
+  Id: 273
+  Data: 0
+  Display: '&2Troll Staff'
+  Lore:
+  - '&7Used in a case of a troll attack'
+  Enchantments:
+  - DAMAGE_ALL:7
+  - DAMAGE_ARTHROPODS:5
+  - DURABILITY:3
+  

@@ -1,0 +1,218 @@
+# -------- WOLF AND TINMAN ------------
+TinmanHelmet:
+  Id: 306
+  Display: '&5Tinman Head'
+  Amount: 1
+  Lore:
+  - '&5&k-----'
+  - '&4Insert Brain.'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+TinmanChestplate:
+  Id: 307
+  Display: '&5Tinman Torso'
+  Amount: 1
+  Lore:
+  - '&5&k-----'
+  - '&4At least he has a heart.'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+TinmanLeggings:
+  Id: 308
+  Display: '&5Tinman Hydrolics'
+  Amount: 1
+  Lore:
+  - '&5&k-----'
+  - '&4A bit rusty.'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+TinmanBoots:
+  Id: 309
+  Display: '&5Tinman Shoe'
+  Amount: 1
+  Lore:
+  - '&5&k-----'
+  - '&4Were off to see the..'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+WolfHelmet:
+  Id: 302
+  Display: '&5Wolf Mask'
+  Amount: 1
+  Lore:
+  - '&5&k-----'
+  - '&4Piercing Eyes.'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:7
+WolfChestplate:
+  Id: 303
+  Display: '&5Wolf Pelt'
+  Amount: 1
+  Lore:
+  - '&5&k-----'
+  - '&4Pack Leader.'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:7
+WolfLeggings:
+  Id: 304
+  Lore:
+  - '&5&k-----'
+  - '&4&4Shadow Stalker.'
+  Display: '&5Wolf Agility'
+  Amount: 1
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:7
+WolfBoots:
+  Id: 305
+  Lore:
+  - '&5&k-----'
+  - '&4None hear you approach.'
+  Display: '&5Wolf Paw'
+  Amount: 1
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:7
+#--------------------------------------
+BansheeSword:
+  Id: 276
+#  Data:
+  Display: '&5&lBanshee Spine'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DAMAGE_ALL:8
+  - LOOT_BONUS_MOBS:2
+  - KNOCKBACK:1
+  Lore: 
+  - '&cLore'
+#  PotionEffects:
+#  BannerLayers:
+BansheeBow:
+  Id: 261
+#  Data:
+  Display: '&5&lBanshee Bow'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - ARROW_DAMAGE:8
+  - ARROW_FIRE:2
+  - ARROW_KNOCKBACK:1
+  Lore:
+  - '&cLore'
+#  PotionEffects:
+#  BannerLayers:
+BansheeHelm:
+  Id: 310
+#  Data:
+  Display: '&5&lBanshee Helm'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DURABILITY:10
+  - PROTECTION_ENVIRONMENTAL:2
+  - PROTECTION_PROJECTILE:2
+  Lore:
+  - '&cLore'
+#  PotionEffects:
+#  BannerLayers:
+BansheeChest:
+  Id: 311
+#  Data:
+  Display: '&5&lBanshee Chestplate'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DURABILITY:10
+  - PROTECTION_ENVIRONMENTAL:2
+  - THORNS:2
+  Lore:
+  - '&cLore'
+#  PotionEffects:
+#  BannerLayers:
+BansheeLegs:
+  Id: 312
+#  Data:
+  Display: '&5&lBanshee Leggings'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DURABILITY:10
+  - PROTECTION_ENVIRONMENTAL:2
+  - THORNS:2
+  Lore:
+  - '&cLore'
+#  PotionEffects:
+#  BannerLayers:
+BansheeBoots:
+  Id: 313
+#  Data:
+  Display: '&5&lBanshee Boots'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DURABILITY:10
+  - PROTECTION_ENVIRONMENTAL:2
+  - PROTECTION_PROJECTILE:2
+  Lore:
+  - '&cLore'
+#  PotionEffects:
+#  BannerLayers:
+SpiderVenom:
+  Id: 373
+  Data: 16427
+  Display: '&a&lSpider Venom'
+#  Attributes:
+  Amount: 3
+#  Options:
+#  Enchantments:
+  Lore:
+  - '&cLore'
+  PotionEffects:
+  - blindness 300 3
+  - poison 300 3
+  - slow 300 3
+  - confusion 300 3
+  - hunger 300 3
+  - weakness 300 3
+#  BannerLayers:
+ViciousKey:
+    Id: 131
+    Data: 0
+    Display: '&8[&5&lVicious Key&8]'
+    Lore:
+    - '&eUse this key at spawn to open the &5&lVicious Crate&e.'
+    
+fujimoraweapon:
+  Id: 276
+  Data: 0
+  Display: 'rapierOfUnfairness'
+  Enchantments:
+  - DAMAGE_ALL:2
+  - FIRE_ASPECT:5
+RapierOfUnfairness:
+  Id: 406
+  Data: 0
+  Display: 'rapierOfUnfairness'
+    
+TestQuestItem:
+    Id: 351
+    Data: 10
+    Display: '&a&lDouble Up'
+    Lore:
+    - '&a'
+    - '&dDifficulty&7: &aEASY'
+    - '&a'
+    - '&dProgress&7: &a|||&7||||'
+    - '&dTime&7: 1h 4m 57s'
+    - '&dRewards&7:'
+    - '&8- &bDiamond Sword &71'
+    - '&6    Sharpness&7 5'
+    - '&6    Unbreaking&7 3'
+    - '&8- &bGold Ingot &716'
+    - ''
+    - '&dInfo&7: /quest info'

@@ -1,0 +1,35 @@
+GaiaHelmet:
+  Id: 298
+  Data: 0
+  Display: '&2I was once destryoed'
+  Options:
+    Color: 27,159,0
+  Enchantments:
+  - DURABILITY:5
+GaiaChestplate:
+  Id: 299
+  Data: 0
+  Display: '&2By the hands of mortals'
+  Options:
+    Color: 27,159,0
+  Enchantments:
+  - DURABILITY:5
+GaiaLeggings:
+  Id: 300
+  Data: 2
+  Display: '&2But the Aether said'
+  Options:
+    Color: 27,159,0
+  Enchantments:
+  - DURABILITY:5
+GaiaBoots:
+  Id: 301
+  Data: 0
+  Display: '&2That I cant go'
+  Options:
+    Color: 27,159,0
+  Enchantments:
+  - DURABILITY:5
+GaiaWeapon:
+  Id: 406
+  Display: 'gaiaEmbrace'

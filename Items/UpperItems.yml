@@ -1,0 +1,19 @@
+FleabottomB:
+  Id: 317
+  Data: 0
+  Lore:
+  - '&7Stolen from the smeltery'
+  Display: '&6Fleabottom Boots'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:5
+FleabottomW:
+  Id: 284
+  Data: 0
+  Lore:
+  - '&7Used as a battle weapon'
+  - '&7but still a good digger'
+  Display: '&6Fleabottom Spade'
+  Enchantments:
+  - DAMAGE_ALL:5
+  - FIRE_ASPECT:2
+  - DIG_SPEED:4

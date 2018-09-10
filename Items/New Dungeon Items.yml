@@ -1,0 +1,98 @@
+TernosHammer:
+  Id: 286
+  Data: 0
+  Display: '&6Ternos Hammer'
+  Lore:
+  - '&aBreak the enemies bones!'
+  Enchantments:
+  - DAMAGE_ALL:5
+  - KNOCKBACK:2
+  - FIRE_ASPECT:2
+  Options:
+HammerTernos:
+  Id: 286
+  Data: 0
+  Display: '&6Ternos Hammer'
+  Lore:
+  - '&aBreak the enemies bones!'
+  Enchantments:
+  - DAMAGE_ALL:1
+  Options:
+TernosChestplate:
+  Id: 307
+  Data: 0
+  Display: '&6Ternos Chestplate'
+  Lore:
+  - '&aI dont know man'
+  Enchantments:
+  - PROTECTION_ENVIROMENTAL:4
+  - DURABILITY:3
+  Options:
+ChestplateTernos:
+  Id: 307
+  Data: 0
+  Display: '&6Ternos Chestplate'
+  Lore:
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:3
+  - DURABILITY:3
+  Options:
+TernosHelmet:
+  Id: 314
+  Data: 0
+  Display: '&6Ternos Helmet'
+  Lore:
+  - '&aSuuuh dude'
+  Enchantments:
+  - PROTECTION_ENVIROMENTAL:3
+  - DURABILITY:3
+  Options:
+TernosLeggings:
+  Id: 308
+  Data: 0
+  Display: '&6Ternos Leggings'
+  Lore:
+  - '&aBreak the enemies bones!'
+  Enchantments:
+  - PROTECTION_ENVIROMENTAL:3
+  - DURABILITY:3
+  Options:
+TernosBoots:
+  Id: 313
+  Data: 0
+  Display: '&6Ternos Boots'
+  Lore:
+  - '&aBreak the enemies bones!'
+  Enchantments:
+  - PROTECTION_ENVIROMENTAL:2
+  - DURABILITY:3
+  Options:
+EliteSword:
+  Id: 283
+  Data: 0
+  Display: '&aUndeads Sword'
+  Lore:
+  - ''
+  Enchantments:
+  - DAMAGE_ALL:1
+  Options:
+EliteBow:
+  Id: 261
+  Data: 0
+  Display: '&aUndeads Bow'
+  Lore:
+  - ''
+  Enchantments:
+  - ARROW_DAMAGE:1
+  Options:
+GarogulSword:
+  Id: 272
+  Data: 0
+  Display: '&8Garoguls Sword'
+  Lore:
+  - ''
+  Enchantments:
+  - DAMAGE_ALL:4
+  Options:
+  
+  

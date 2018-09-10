@@ -1,0 +1,72 @@
+ArthurHelmet:
+  Id: 314
+  Data: 0
+  Display: ''
+  Enchantments:
+  - DURABILITY:5
+ArthurChestplate:
+  Id: 299
+  Data: 0
+  Display: ''
+  Options:
+    Color: 255,84,233
+  Enchantments:
+  - DURABILITY:5
+ArthurLeggings:
+  Id: 316
+  Data: 2
+  Display: ''
+  Enchantments:
+  - DURABILITY:5
+ArthurBoots:
+  Id: 301
+  Data: 0
+  Display: ''
+  Options:
+    Color: 255,84,233
+  Enchantments:
+  - DURABILITY:5
+QuaxisWeapon:
+  Id: 293
+  Data: 0
+  Display: ''
+  Enchantments:
+  - DAMAGE_ALL:3
+  - FIRE_ASPECT:4
+QuaxisHelmet:
+  Id: 310
+  Data: 0
+  Display: ''
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:2
+overseerWeapon:
+  Id: 279
+  Data: 0
+  Display: ''
+  Enchantments:
+  - DAMAGE_ALL:1
+  - FIRE_ASPECT:4
+overseerHelmet:
+  Id: 298
+  Data: 0
+  Display: ''
+  Options:
+    Color: 0,102,204
+overseerChestplate:
+  Id: 299
+  Data: 0
+  Display: ''
+  Options:
+    Color: 0,102,204
+overseerLeggings:
+  Id: 300
+  Data: 0
+  Display: ''
+  Options:
+    Color: 0,102,204
+overseerBoots:
+  Id: 301
+  Data: 0
+  Display: ''
+  Options:
+    Color: 0,102,204

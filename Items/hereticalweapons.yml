@@ -1,0 +1,15 @@
+HereticalArcher:
+  Id: 261
+  Data: 0
+  Display: “&cHeretical Bow”
+  Enchantments:
+    - DURABILITY:20
+    - ARROW_DAMAGE:10
+    - ARROW_FIRE:2
+HereticalSword:
+  Id: 268
+  Data: 0
+  Display: “&cHeretical Sword”
+  Enchantments:
+    - DURABILITY:20
+    - DAMAGE_ALL:24

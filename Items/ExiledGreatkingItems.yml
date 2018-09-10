@@ -1,0 +1,23 @@
+
+ExiledGreatkingChestplate:
+  Id: 311
+  Data: 0
+  Display: '&0Exiled Greatknight Chestplate'
+  Lore:
+  - '&6'
+  - '&cWorn by the knights'
+  Enchantments:
+  - PROTECTION_ENVIRONMENTAL:4
+  - PROTECTION_EXPLOSIONS:4
+  - DURABILITY:3
+  
+FakeWarhammer:
+  Id: 293
+  Data: 0
+  Display: '&5Warhammer'
+  Lore:
+  Enchantments:
+  - DAMAGE_ALL:7
+  - DURABILITY:3
+  
+#-----------------------------------------------

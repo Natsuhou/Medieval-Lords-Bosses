@@ -1,0 +1,19 @@
+UncleBenSlimeBall:
+  Id: 341
+  Data: 0
+  Lore:
+  Display:
+  Enchantments:
+  - DAMAGE_ALL:5
+  - FIRE_ASPECT:2
+  - KNOCKBACK:3
+  Attributes:
+    MainHand:
+      Damage: 6
+SuperiorSlowPotion:
+  Id: 373
+  Data: 16426
+  Lore:
+  Display: '&dSuperior Slow Potion'
+  PotionEffects:
+  - SLOW 50 7

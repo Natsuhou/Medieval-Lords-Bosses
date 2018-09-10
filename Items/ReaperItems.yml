@@ -1,0 +1,32 @@
+ReaperHelmet:
+  Id: 298
+  Data: 0
+  Display: '&8Reaper''s Helmet'
+  Options:
+    Color: 000,000,000
+  Enchantments:
+  - DURABILITY:5
+ReaperChestplate:
+  Id: 299
+  Data: 0
+  Display: '&8Reaper''s Chestplate'
+  Options:
+    Color: 000,000,000
+  Enchantments:
+  - DURABILITY:5
+ReaperLeggings:
+  Id: 300
+  Data: 2
+  Display: '&8Reaper''s Leggings'
+  Options:
+    Color: 000,000,000
+  Enchantments:
+  - DURABILITY:5
+ReaperBoots:
+  Id: 301
+  Data: 0
+  Display: '&8Reaper''s Boots'
+  Options:
+    Color: 000,000,000
+  Enchantments:
+  - DURABILITY:5

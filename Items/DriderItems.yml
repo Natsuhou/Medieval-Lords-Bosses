@@ -1,0 +1,23 @@
+driderSword:
+  Id: 267
+  Data: 0
+  Display: ''
+  Enchantments:
+  - DURABILITY:1
+driderHelmet:
+  Id: 298
+  Options:
+    Color: 234,237,242
+driderChestplate:
+  Id: 299
+  Options:
+    Color: 35,37,40
+driderLeggings:
+  Id: 300
+  Options:
+    Color: 35,37,40
+driderBoots:
+  Id: 301
+  Options:
+    Color: 35,37,40
+    
