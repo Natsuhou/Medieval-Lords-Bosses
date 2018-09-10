@@ -1,0 +1,22 @@
+Slam:
+  Cooldown: 25
+  Skills:
+  - message{m="<mob.name> has &eslammed &fyou with tremendous force&f!"}
+  - teleport{spreadh=3;spreadv=0} @Trigger
+  - delay 100
+  - effect:particles{particle=snowballpoof;amount=200;hS=1;vS=1;speed=1} @PIR{r=20}'
+  - damagepercent{p=0.25} @Trigger
+  - potion{t=SLOW;d=300;l=1} @PIR{r=20}
+  - potion{t=WEAKNESS;d=150;l=1} @PIR{r=20}
+YetiHit:
+  Skills:
+  - effect:particles{particle=snowshovel;amount=200;hS=1;vS=1;speed=5} @Self
+Blizzard:
+  Cooldown: 35
+  Skills:
+  - message{m="<mob.name>&f<&co> Feel the power of the &bcold&f!"}
+  - damagepercent{p=0.05} @PIR{r=20}
+  - potion{t=SLOW;d=300;l=1} @PIR{r=20}
+  - effect:particles{particle=snowballpoof;amount=200;hS=1;vS=1;speed=1} @PIR{r=20}
+  - delay 100
+  - effect:particles{particle=snowballpoof;amount=200;hS=1;vS=1;speed=1} @PIR{r=20}

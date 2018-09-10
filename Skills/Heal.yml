@@ -1,0 +1,9 @@
+Heal10:
+  Skills:
+  - healpercent{m=0.1} 
+Heal20:
+  Skills:
+  - healpercent{m=0.2} 
+Heal30:
+  Skills:
+  - healpercent{m=0.3} 

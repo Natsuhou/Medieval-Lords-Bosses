@@ -1,0 +1,4 @@
+CaveTrollIgnite:
+  Skills:
+  - ignite{ticks=100} @trigger
+  - effect:firework{t=4;d=0;f=true;tr=true;c=f4df42} @trigger

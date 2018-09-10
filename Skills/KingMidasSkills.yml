@@ -1,0 +1,36 @@
+GoldenTouch:
+  Skills:
+  - message{m="<mob.name> has turned <trigger.name> into &egold&f!"} @PIR{r=15}
+  - effect:firework{t=0;colors=ECB60E;d=0} @Target
+  - delay 30
+  - effect:firework{t=0;colors=ECB60E;d=0} @Target
+  - delay 30
+  - potion{t=SLOW;d=100;l=10} @Trigger
+  - effect:firework{t=0;colors=ECB60E;d=0} @PIR{r=15}
+DecayTouch:
+  Cooldown: 15
+  Skills:
+  - message{m="<mob.name> You will all &0DECAY&f!"}
+  - effect:firework{t=0;colors=ECB60E;d=0} @PIR{r=15}
+  - damage{a=15} @Target
+  - delay 40
+  - damage{a=10} @Target
+  - delay 50
+  - damage{a=7} @Target
+  - delay 90
+  - message{m="<mob.name> die! &4DIE&f!"} PIR{r=15}
+  - effect:firework{t=0;colors=3C3431;d=0} @PIR{r=15}
+  - throw{v=8;vy=4} @PIR{r=15}
+  - percentDamage{a=0.35}
+StealGold:
+  Cooldown: 15
+  Skills:
+  - message{m="<mob.name> has stolen &egold &ffrom you!"} @Target
+  - effect:firework{t=0;colors=ECB60E;d=0} @Target
+  - currencytake{a=250} @Target
+  - damage{a=5} @Target
+GetGold:
+  Cooldown: 15
+  Skills:
+  - message{m="&6<trigger.name> has stolen &egold &ffrom <mob.name>"} @PIR{r=15}
+  - currencygive{a=450} @Trigger ~onDamaged 1

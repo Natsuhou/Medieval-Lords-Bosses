@@ -1,0 +1,76 @@
+ReaperDeath:
+  Skills:
+  - message{m="[&4!&f] &8You will all &4DIE&f!"} @PIR{r=15}
+  - sendtitle{title="&4! Warning !";subtitle="&eReaper has awoken!";d=30;fi=15;fo=15} @PIR{r=15} 
+  - effect:smoke @PIR{r=15} 
+  - summon{t=GrimReaper;a=1} @Self 
+SoulCorrupt:
+  Skills:
+  - message{m="<mob.name>&f &fhas &8corrupted <trigger.name>''s &fsoul!"} @PIR{r=15}
+  - effect:firework{t=0;colors=000000;d=0} @Trigger{r=15}
+  - potion{t=WITHER;d=150;l=1} @Trigger
+  - potion{t=SLOW;d=150;l=3} @Trigger
+SummonHades:
+  Skills:
+  - effect:firework{t=0;colors=000000;d=0} @PIR{r=15}
+  - effect:firework{t=0;colors=000000;d=0} @PIR{r=15}
+  - effect:firework{t=0;colors=000000;d=0} @PIR{r=15}
+  - summon{t=RightHandOfHades;a=1} @Self
+  - message{m="[&4WARNING&f] &8Right Hand of Hades, Reaper &fhas been awoken by &6<trigger.name>"} @PlayersOnServer
+OnHit:
+  - effect:blockmask{m=obsidian;r=5} @Self
+  - effect:blockunmask{r=10} 
+  
+RightHandOfHadesShadowStep:
+  Skills:
+  - skill{s=ShadowStepHade} @RPIN{radius=20}
+  - delay 10
+  - skill{s=ShadowStepHade} @RPIN{radius=20}
+  - delay 10
+  - skill{s=ShadowStepHade} @RPIN{radius=20}
+  - delay 10
+  - skill{s=ShadowStepHade} @RPIN{radius=20}
+  - delay 10
+  - skill{s=ShadowStepHade} @RPIN{radius=20}
+  
+ShadowStepHade:
+  Skills:
+  - shadowstep
+  - cgdamage{damage=200}
+  - playsound(sound=mob.blaze.breathe;pitch=1.9;volume=1}
+
+SoulShatter:
+  Skills:
+  - sound{s=entity.endermen.scream} 
+  - effect:firework{t=4;d=2;f=true;c=#12131C} 
+  - effect:itemspray{i=redstone;a=20;v=5;d=100} 
+  - delay 30
+  - effect:firework{t=4;d=2;f=true;c=#12131C} 
+  - effect:itemspray{i=redstone;a=20;v=5;d=100} 
+  - effect:geyser{h=8} 
+  - effect:blockmask{m=obsidian;r=5;d=15} 
+  - potion{t=SLOW;d=400;l=7} 
+  - throw{v=5;vy=15}
+  - effect:firework{t=4;d=2;f=true;c=#12131C}
+  - effect:itemspray{i=redstone;a=20;v=5;d=100} 
+  - effect:blockunmask{r=30}
+
+SoulPull:
+  Skills:
+  - pull{v=3} @PIR{r=15}
+  - effect:firework{t=4;d=2;f=true;c=#12131C} @PIR{r=15}
+  - delay 15
+  - cgdamage{damage=300} @PIR{r=15}
+  - delay 30
+  - pull{v=5} @PIR{r=15}
+  - effect:firework{t=4;d=2;f=true;c=#12131C} @PIR{r=15}
+  - cgdamage{damage=300} @PIR{r=15}
+  - delay 30
+  - pull{v=8} @PIR{r=15}
+  - effect:firework{t=4;d=2;f=true;c=#12131C} @PIR{r=15}
+  - cgdamage{damage=300} @PIR{r=15}
+  - delay 30
+  - pull{v=10} @PIR{r=15}
+  - effect:firework{t=4;d=2;f=true;c=#12131C} @PIR{r=15}
+  - cgdamage{damage=300} @PIR{r=15}
+

@@ -1,0 +1,14 @@
+SummonSod:
+  Skills:
+  - summon{t=Sod;a=1} @PIR{r=15}
+SummonAdhuchas:
+  Skills:
+  - summon{t=Adhuchas;a=1} @PIR{r=15}
+GreyHeal:
+  Skills:
+  - message{m="<mob.name> has &4eaten &fa soul!"} @PIR{r=15}
+  - heal{a=200} @Self
+Punish:
+  Skills:
+  - message{m="<mob.name> has &8punished &6<trigger.name>&f!"} @PIR{r=15} 
+  - damage{a=10} @Trigger

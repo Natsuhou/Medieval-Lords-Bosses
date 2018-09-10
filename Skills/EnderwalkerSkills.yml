@@ -1,0 +1,5 @@
+Poison:
+  Skills:
+  - potion{t=SLOW;d=100;l=3}
+  - potion{t=BLINDNESS;d=75;l=2}
+  - damage{a=2}

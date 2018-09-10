@@ -1,0 +1,13 @@
+Venom:
+  Skills:
+  - message{m="<mob.name> &fhas injected venom into you!"} @Target
+  - effect:firework{t=0;colors=2D723C;d=0} @Target
+  - potion{t=SLOW;d=50;l=3} @Target
+  - potion{t=POISON;d=75;l=1} @Target
+  - damage{a=2} @Target
+SQBite:
+  Skills:
+  - teleport{sh=3} @Target
+  - jump{v=2} @Target
+  - damage{a=3} @Target
+  

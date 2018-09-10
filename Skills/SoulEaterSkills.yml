@@ -1,0 +1,21 @@
+SoulEat:
+  Cooldown: 60
+  Skills:
+  - message{m="<mob.name> has &brecovered &fsome health!"} @PIR{r=15}
+  - healpercent{p=0.1} @Self
+  - potion{t=SLOW;d=100;l=10} @Trigger
+  - effect:firework{t=0;colors=ECB60E;d=0} @PIR{r=15}
+Curse:
+  Cooldown: 60
+  Skills:
+  - message{m="<mob.name> has &7cursed &fyou!"} @Trigger
+  - effect:particles{p=witchMagic;a=200;hS=1;vS=1;s=1} @Trigger
+  - damage{a=5} @Trigger
+  - potion{type=SLOW;duration=600;level=1} @Trigger
+  - potion{type=WITHER;duration=300;level=1} @Trigger
+Force:
+  Cooldown: 45
+  Skills:
+  - message{m="&6<mob.name>&f<&co> Do you really think you can escape me?"} @PIR{r=15}
+  - effect:particles{p=portal;a=200;hS=1;vS=1;s=1} @Self
+  - forcepull{spread=5} @PIR{r=20}

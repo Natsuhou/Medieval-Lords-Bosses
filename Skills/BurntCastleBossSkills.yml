@@ -1,0 +1,81 @@
+BurntCastleRhazzadFireballSkill:
+  Conditions:
+  - playerwithin 20
+  Skills:
+  - shootfireball{y=1;v=4;ps=true;i=true;ft=60} @target
+  - delay 40
+  - shootfireball{y=1;v=4;ps=true;i=true;ft=60} @target 
+#-------------------------------------------------------------------------------------------
+BurntCastleSpiderQueenPrisonSkill:
+  Skills:
+  - effect:itemspray{item=web;amount=50;velocity=3;d=150;} @self
+  - effect:itemspray{item=string;amount=50;velocity=3;d=150;} @self
+  - prison{material=WEB;duration=140;breakable=true} @PIR{r=20}
+BurntCastleSpiderQueenSpawnMinionsSkill:
+  Skills:
+  - summon{type=BurntCastleSpiderQueenMinion;amount=4;radius=3} @PIR{r=20}
+BurntCastleSpiderQueenSpawnSuperMinionsSkill:
+  Skills:
+  - summon{type=BurntCastleSpiderQueenSuperMinion;amount=2;radius=1} @PIR{r=20}
+BurntCastleSpiderQueenSuperMinionSkeletonArrowSkill:
+  Conditions:
+  - playerwithin 20
+  Skills:
+  - shoot{type=ARROW;velocity=5;damage=2} @target
+  - delay 10  
+  - shoot{type=ARROW;velocity=5;damage=2} @target
+  - delay 10 
+  - shoot{type=ARROW;velocity=5;damage=2} @target
+  - delay 10 
+  - shoot{type=ARROW;velocity=5;damage=2} @target
+  - delay 10 
+  - shoot{type=ARROW;velocity=5;damage=2} @target
+#------------------------------------------------------------------------------------------------
+BurntCastleThayanWitchTNTSkill:
+  Skills:
+  - summon{type=BurntCastlePrimedTNT;amount=1;radius=1} @PIR{r=20}
+  - delay 200
+  - summon{type=BurntCastlePrimedTNT;amount=1;radius=1} @PIR{r=20}
+BurntCastleThayanWitchAddCurse:
+  Cooldown: 10
+  Skills:
+  - message{m="<mob.name> has &8cursed &f<trigger.name>!"} @Target
+  - delay 600
+  - potion{type=WITHER;duration=200;level=4}
+  - actionmessage{m="&0You have been cursed"}
+#------------------------------------------------------------------------------------------------
+OverseerFirstStorm:
+  Skills:
+  - sendtitle{title="&l<mob.name>";subtitle="&cFather, grant me power of the storm!";d=30;fi=15;fo=15} @PIR{r=25}
+  - delay 40
+  - storm{type=BURST;color1=239,146,64;color2=230,244,34;radius=4;times=60} @self
+  - damage{amount=30;ignoreArmor=true} @PIR{r=15}
+  - sound{s=ambient.weather.thunder;v=5} @self
+OverseerStorm:
+  Skills:
+  - storm{type=BURST;color1=239,146,64;color2=230,244,34;radius=4;times=60} @self
+  - damage{amount=30;ignoreArmor=true} @PIR{r=15}
+  - sound{s=ambient.weather.thunder;v=5} @self
+OverseerTeleport:
+  Conditions:
+  - mobsinchunk{a=>0} true
+  Skills:
+  - ignite{ticks=500} @PIR{r=40}
+  - effect:firework{t=3;d=0;c=da0ef9;f=true;tr=true} @self 
+  - delay 800
+  - skill{s=OverseerTeleport}
+QuaxisMount:
+  Skills:
+  - mounttarget @target
+  - delay 200
+  - dismount
+#------------------------------------------------------------------------------------------------
+SummonAllies:
+  Skills:
+  - summon{t=AetherMerlin} @Self 
+  - summon{t=AetherLancelot} @Self
+  - effect:firework{t=3;d=0;c=da0ef9;f=true;tr=true} @PIR{r=15}
+  - effect:itemspray{item=dragon_egg;amount=4;velocity=3;d=150;} @PIR{r=15}
+AetherHit:
+  Skills:
+  - effect:itemspray{item=dragon_egg;amount=4;velocity=3;d=150;} @PIR{r=15}

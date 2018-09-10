@@ -1,0 +1,94 @@
+#PIR Skill
+FrozenHell:
+  Skills:  
+  - delay 30
+  - sound{s=entity.endermen.scream} 
+  - effect:firework{t=1;d=2;f=true;c=#AFEEEE} 
+  - cgdamage{damage=80} 
+  - delay 15
+  - effect:firework{t=1;d=2;f=true;c=#AFEEEE} 
+  - cgdamage{damage=80} 
+  - delay 15
+  - effect:firework{t=1;d=2;f=true;c=#AFEEEE} 
+  - cgdamage{damage=80} 
+  - delay 15
+  - effect:firework{t=1;d=2;f=true;c=#AFEEEE} 
+  - cgdamage{damage=80}  
+  - delay 15
+  - effect:firework{t=1;d=2;f=true;c=#AFEEEE} 
+  - cgdamage{damage=80}  
+  - delay 15
+  - effect:firework{t=1;d=2;f=true;c=#AFEEEE} 
+  - cgdamage{damage=80}  
+#Target Skill
+FrozenQuake:
+  Skills:
+  - delay 30
+  - sound{s=entity.endermen.scream} 
+  - leap{v=200} 
+  - effect:firework{t=4;d=2;f=true;c=#AFEEEE} 
+  - effect:itemspray{i=snowball;a=20;v=5;d=100} 
+  - effect:blockmask{m=packed_ice;r=5;d=15} 
+  - effect:firework{t=4;d=2;f=true;c=#AFEEEE} 
+  - throw{v=5;vy=15} 
+  - cgdamage{damage=300}
+  - effect:blockunmask{r=30}
+
+#Target Skill
+FrozenPull:
+  Skills:
+  - cgdamage{damage=100} 
+  - effect:firework{t=4;d=2;f=true;c=#AFEEEE} @PIR{r=15}
+  - delay 60
+  - cgdamage{damage=100} 
+  - delay 60
+  - effect:firework{t=4;d=2;f=true;c=#AFEEEE} @PIR{r=15}
+  - effect:itemspray{i=snowball;a=20;v=5;d=100} @PIR{r=15}
+  - cgdamage{damage=100} 
+  - delay 60
+  - cgdamage{damage=100} 
+  - delay 60
+  - effect:firework{t=4;d=2;f=true;c=#AFEEEE} @PIR{r=15}
+  - effect:itemspray{i=snowball;a=20;v=5;d=100} @PIR{r=15}
+  - leap{v=200} 
+  - effect:firework{t=4;d=2;f=true;c=#AFEEEE} @PIR{r=15}
+  - effect:itemspray{i=snowball;a=20;v=5;d=100} @PIR{r=15}
+  - effect:blockmask{m=packed_ice;r=5;d=15} @PIR{r=15}
+  - delay 60
+  - effect:firework{t=4;d=2;f=true;c=#AFEEEE} @Self
+  - throw{v=3;vy=8} 
+  - cgdamage{damage=100} 
+  - effect:blockunmask{r=30}
+
+#PIR/Final Skill
+IceAge:
+  Skills:
+  - sound{s=entity.endermen.scream} 
+  - effect:firework{t=4;d=2;f=true;c=#AFEEEE} 
+  - effect:itemspray{i=snowball;a=20;v=5;d=100} 
+  - delay 30
+  - effect:firework{t=4;d=2;f=true;c=#AFEEEE} 
+  - effect:itemspray{i=snowball;a=20;v=5;d=100} 
+  - effect:geyser{h=8} 
+  - cgdamage{damage=400} 
+  - effect:blockmask{m=packed_ice;r=5;d=15} 
+  - potion{t=SLOW;d=400;l=7} 
+  - throw{v=5;vy=15}
+  - effect:firework{t=4;d=2;f=true;c=#AFEEEE}
+  - effect:itemspray{i=snowball;a=20;v=5;d=100} 
+  - cgdamage{damage=400} 
+  - effect:blockunmask{r=30}
+
+OnHitEffect:
+  Skills:
+  - effect:particles{p=snowshovel;a=30;hS=1;vS=1;s=1} @Self
+  - effect:blockmask{m=packed_ice;r=5;d=15} @Self
+  - sound{s=IRONGOLEM_HIT} @PIR{r=15}
+  - effect:blockunmask{r=30} ~onTimer:1300
+
+
+
+
+
+
+

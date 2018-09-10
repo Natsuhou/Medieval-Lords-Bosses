@@ -1,0 +1,12 @@
+ToxicPoison:
+  Skills:
+  - effect:firework{t=0;colors=2D723C;d=0} @Target
+  - potion{t=SLOW;d=100;l=3} @Target
+  - potion{t=POISON;d=50;l=2} @Target
+  - damage{a=2} @Target
+Bite:
+  Skills:
+  - teleport{sh=3} @Target
+  - jump{v=2} @Target
+  - damage{a=3} @Target
+  

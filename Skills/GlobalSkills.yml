@@ -1,0 +1,5 @@
+HB:
+  Skills:
+  - actionmessage{m="<mob.name> &8| &a<mob.hp>&8/&c<mob.mhp>"} @Trigger ~onDamaged >80%
+  - actionmessage{m="<mob.name> &8| &e<mob.hp>&8/&c<mob.mhp>"} @Trigger ~onDamaged =30%-80%
+  - actionmessage{m="<mob.name> &8| &4<mob.hp>&8/&c<mob.mhp>"} @Trigger ~onDamaged <30%

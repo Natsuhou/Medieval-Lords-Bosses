@@ -1,0 +1,39 @@
+PoisonShot:
+  Skills:
+  - skill{skill=PoisonShoot}
+  - delay 20
+  - skill{skill=PoisonShoot}
+  - delay 20
+  - skill{skill=PoisonShoot}
+PoisonShoot:
+  Skills:
+    - projectile{onTick=PoisonShotTick;onHit=PoisonShotHit;onEnd=PoisonShotHit;v=13;i=1;hR=2;vR=2}
+PoisonShotTick:
+  Skills:
+  - effect:particles{p=slime;amount=1;speed=0;hR=0;vR=0} @origin
+PoisonShotHit:
+  Skills:
+  - effect:particles{p=lava;a=5;hS=1;vS=1}
+  - effect:sound{s=random.explode;v=1;p=0}
+  - potion{type=POISON;duration=100;level=2}
+Webshot:
+  Skills:
+  - skill{skill=WebShoot}
+  - delay 20
+  - skill{skill=WebShoot}
+WebShoot:
+  Skills:
+    - projectile{onTick=WebShotTick;onHit=WebShotHit;onEnd=WebShotHit;v=13;i=1;hR=2;vR=2}
+WebShotTick:
+  Skills:
+  - effect:particles{p=spell;amount=1;speed=0;hR=0;vR=0} @origin
+WebShotHit:
+  Skills:
+  - effect:particles{p=spell;a=5;hS=1;vS=1}
+  - effect:sound{s=random.explode;v=1;p=0}
+  - potion{type=SLOW;duration=80;level=5}
+SyndrithStorm:
+  Skills:
+  - message{m="&6--------- &5 Hahaha! Thunderr!! &6---------"} @PlayersInRadius{r=30}
+  - storm{type=BURST;color1=178,17,162;color2=76,64,76;radius=4;times=60} @self
+  - damage{amount=30;ignoreArmor=true} @PIR{r=15}

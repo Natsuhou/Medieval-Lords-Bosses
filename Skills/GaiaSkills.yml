@@ -1,0 +1,117 @@
+#################################################[Gaia Skills]####################################################################
+GaiaHit:
+  Skills:
+  - effect:particles{p=happyVillager;a=500;hS=15;vS=15;s=3} @Self
+  - effect:blockmask{m=grass;r=7;d=300} @Self
+  - sound{s=IRONGOLEM_HIT} @PIR{r=15}
+GaiaSummon:
+  Cooldown: 30
+  Skills:
+  - message{m="<mob.name> &fhas been &cenraged"}
+  - weather{type=storm;duration=6000} 
+  - lightning @PIR{r=15}  
+  - summon{t=AetherWalker;a=1} @PIR{r=15}
+  - cgdamage{damage=800} @PIR{r=15}
+  - effect:blockunmask{r=80} 
+Burial:
+  Cooldown: 45
+  Skills:
+  - message{m="<mob.name> &fhas buried &e<trigger.name> &fforever..."}
+  - effect:firework{t=4;d=2;f=true;c=#12131C} @PIR{r=15}
+  - effect:itemspray{i=bone;a=20;v=5;d=100} @PIR{r=15}
+  - delay 300
+  - effect:firework{t=4;d=2;f=true;c=#12131C} @PIR{r=15}
+  - effect:itemspray{i=bone;a=20;v=5;d=100} @PIR{r=15}
+  - delay 300
+  - effect:firework{t=4;d=2;f=true;c=#12131C} @PIR{r=15}
+  - effect:itemspray{i=bone;a=20;v=5;d=100} @PIR{r=15}
+  - cgdamage{damage=300} @Trigger
+  - prison{m=obsidian;d=150} @Trigger
+  - effect:blockunmask{r=80} 
+FeelPain:
+  Cooldown: 35
+  Skills:
+  - message{m="<mob.name>&f<&co> Do you feel... this?"}
+  - effect:blockmask{m=obsidian;r=7;d=300;n=4} @PIR{r=15}
+  - cgdamage{damage=30} @PIR{r=15}
+  - effect:itemspray{i=coal;a=20;v=5;d=100} @PIR{r=15}
+  - delay 500
+  - cgdamage{damage=30} @PIR{r=15}
+  - effect:itemspray{i=coal;a=20;v=5;d=100} @PIR{r=15}
+  - delay 500
+  - cgdamage{damage=30} @PIR{r=15}
+  - effect:itemspray{i=coal;a=20;v=5;d=100} @PIR{r=15}
+  - delay 1000
+  - cgdamage{damage=30} @PIR{r=15}
+  - effect:itemspray{i=coal;a=20;v=5;d=100} @PIR{r=15}
+  - delay 1500
+  - cgdamage{damage=30} @PIR{r=15}
+  - effect:itemspray{i=coal;a=20;v=5;d=100} @PIR{r=15}
+  - delay 9000
+  - cgdamage{damage=30} @PIR{r=15}
+  - effect:itemspray{i=coal;a=20;v=5;d=100} @PIR{r=15}
+  - effect:blockunmask{r=80} 
+GaiaDeath:
+  Skills:
+  - lightning @PIR{r=15} 
+  - sendtitle{title="&2Fools";subtitle="&aI already told you once...";d=30;fi=15;fo=15} @PIR{r=15}
+  - effect:firework{t=0;colors=BB349B;d=0} @PIR{r=15} 
+  - summon{t=AetherGaiaF1;a=1} @Self
+AetherGaiaF1Death:
+  Skills:
+  - lightning @PIR{r=15} 
+  - sendtitle{title="&5This Is The Beginning";subtitle="&dYou will fail...";d=30;fi=15;fo=15} @PIR{r=15}
+  - delay 500
+  - effect:firework{t=0;colors=BB349B;d=0} @PIR{r=15} 
+  - summon{t=AetherGaiaF2;a=1} @Self
+AetherGaiaF2Death:
+  Skills:
+  - lightning @PIR{r=15} 
+  - sendtitle{title="&6This Is Nothing";subtitle="&eYour fate is...";d=30;fi=15;fo=15} @PIR{r=15}
+  - summon{t=AetherGaiaFinal;a=1} @Self
+  - delay 500
+  - sendtitle{title="&4SEALED";subtitle="";d=30;fi=15;fo=15} @PIR{r=15}
+  - effect:firework{t=0;colors=BB349B;d=0} @PIR{r=15} 
+DevourSouls:
+  Skills:
+  - message{m="<mob.name> &fis consuming &bsouls&b!"} @PIR{r=15}
+  - message{m="&6Unknown Voice&f<&co> Do not let <mob.name> &fconsume souls! They will give her health!"} @PIR{r=15}
+  - summon{t=Soul;a=3} @PIR{r=15} 
+  - effect:firework{t=0;colors=2D723C;d=0} @PIR{r=15}
+  - consume{d=5000;h=200} @MIR{t=Soul;r=20} @Self
+GaiaHeal:
+  Skills:
+  - message{m="<mob.name> has &brecovered &fsome health!"} @PIR{r=15}
+  - heal{a=200} 
+  - effect:firework{t=0;colors=2D723C;d=0} @PIR{r=15}
+SummonAetherWidow:
+  Cooldown: 40
+  Skills:
+  - lightning @PIR{r=15} 
+  - sendtitle{title="&5Mortals";subtitle="&dFeel the power of the Aether...";d=30;fi=15;fo=15} @PIR{r=15}
+  - effect:firework{t=0;colors=BB349B;d=0} @PIR{r=15} 
+  - summon{t=AetherWidow;a=2} @PIR{r=15}
+#################################################[Additional Bosses Skills]####################################################################
+AetherPoison:
+  Cooldown: 15
+  Skills: 
+  - message{m="<mob.name> &fhas bitten you!"} @Target
+  - effect:firework{t=0;colors=2D723C;d=0} @Target
+  - potion{t=SLOW;d=50;l=3} @Target
+  - potion{t=POISON;d=75;l=1} @Target
+  - cgdamage{damage=80} @Target
+AetherWidowHit:
+  Skills:
+  - effect:itemspray{i=diamond;a=5;v=2;d=50} @Self
+AetherKingHit:
+  Skills:
+  - effect:itemspray{i=redstone;a=5;v=2;d=50} @Self
+SoulHit:
+  - effect:itemspray{i=glowstone_dust;a=2;v=5;d=50} @Self
+FireballBarrage:
+  Skills:
+  - shootfireball{y=1;v=4} @Target
+  - delay 300
+  - shootfireball{y=1;v=4} @Target
+  - delay 300
+  - shootfireball{y=1;v=4} @Target

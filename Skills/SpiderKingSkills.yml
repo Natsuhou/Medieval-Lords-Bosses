@@ -1,0 +1,49 @@
+DamageThrow:
+  Skills:
+  - throw{v=15;vy=5} @PIR{r=10}
+  - potion{t=POISON;d=100;l=1}
+  - damage{a=3;iA=true} @Target
+  - delay 30
+  - damage{a=4} @PIR{r=10}
+  - throw{v=15;vy=5} @PIR{r=10}
+  - potion{t=POISON;d=100;l=1}
+  - damage{a=3;iA=true} @Target
+  - delay 30
+  - damage{a=4} @PIR{r=10}
+Mount:
+  Cooldown: 20
+  Skills:
+  - message{m="<mob.name> &fjumped on <trigger.name>'s back!"} @PIR{r=30}
+  - effect:firework{t=1;colors=555555;d=0} @Target
+  - mounttarget
+  - potion{t=CONFUSION;d=200;l=2} @target
+  - potion{t=SLOW;d=200;l=2} @target
+  - potion{t=POISON;d=200;l=1} @target
+  - delay 200
+  - dismount
+Poison:
+  Cooldown: 15
+  Skills:
+  - message{m="<mob.name> &fhas poisoned <trigger.name>!"} @PIR{r=30}
+  - effect:firework{t=1;colors=AA0000;d=0} @Target
+  - damage{a=3;iA=true} @Target
+  - potion{t=POISON;d=100;l=1}
+  - delay 30
+  - effect:firework{t=0;colors=AA0000;d=0} @Target
+  - potion{t=POISON;d=100;l=1}
+  - damage{a=3;iA=true} @Target
+  - delay 30
+  - effect:firework{t=0;colors=AA0000;d=0} @Target
+  - potion{t=POISON;d=100;l=1}
+  - damage{a=3;iA=true} @Target
+  - delay 30
+  - effect:firework{t=0;colors=AA0000;d=0} @Target
+  - potion{t=POISON;d=100;l=1}
+  - damage{a=3;iA=true} @Target
+Fireworks:
+  Skills:
+  - effect:firework{t=0;colors=AA0000;d=0} @PIR{r=15}
+  - delay 30
+  - effect:firework{t=0;colors=AA0000;d=0} @PIR{r=15}
+  - delay 30
+  - effect:firework{t=0;colors=AA0000;d=0} @PIR{r=15}

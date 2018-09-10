@@ -1,0 +1,34 @@
+ExiledGreatkingMount:
+  Skills:
+  - mounttarget @target
+  - ignite{ticks=100} @target
+  - actionmessage{m="<mob.name>:&f &4Woaah, scaryyy"} @PlayersInRadius{r=30}
+  - effect:explosion @self
+  - delay 20
+  - ignite{ticks=100} @target
+  - effect:explosion @self
+  - delay 20
+  - ignite{ticks=100} @target
+  - effect:explosion @self
+  - delay 40
+  - dismount 
+  
+ExiledGreatkingPotions:
+  Skills:
+  - actionmessage{m="<mob.name>:&f &4Hehehe, take this!!"} @PlayersInRadius{r=30}
+  - lightning{d=2} @target
+  - delay 10
+  - lightning{d=2} @target
+  - delay 10
+  - lightning{d=2} @target
+  - delay 10
+  - lightning{d=2} @target
+  
+ExiledGreatknightHealInWater:
+  Conditions:
+  - inblock STATIONARY_WATER
+  Skills:
+  - actionmessage{m="<mob.name>:&f &aWater is healing me"} @PlayersInRadius{r=30} 0.3
+  - heal{amount=20} @self
+  
+ 

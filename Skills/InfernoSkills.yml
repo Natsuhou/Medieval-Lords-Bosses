@@ -1,0 +1,135 @@
+InfernoCharge:
+  Skills:
+  - message{m="[&c!&f] <mob.name> &7is charging up!"} @PlayersInRadius{r=25}
+  - effect:firework{t=0;d=0;f=true;tr=false} @self
+  - delay 30
+  - effect:firework{t=0;d=0;f=true;tr=false} @self
+  - delay 25
+  - effect:firework{t=0;d=0;f=true;tr=false} @self
+  - delay 20
+  - effect:firework{t=0;d=0;f=true;tr=false} @self
+  - delay 18
+  - effect:firework{t=1;d=0;f=true;tr=false} @self
+  - delay 15
+  - effect:firework{t=1;d=0;f=true;tr=false} @self
+  - delay 7
+  - explosion{yield=3} @self
+  - delay 4
+  - skill{s=Homer}
+  - delay 25
+  - skill{s=Homer}
+  - delay 25
+  - skill{s=Homer}
+  - delay 30
+  - skill{s=Homer}
+  - delay 30
+  - skill{s=Homer}
+Homer:
+  Skills:
+  - projectile{onTick=InfernoTick;onHit=InfernoHit;onEnd=InfernoHit;v=10i=1;hR=1;vR=1}
+InfernoTick:
+  Skills:
+  - effect:particles{p=flame;a=1} @origin
+InfernoHit:
+  Skills:
+  - effect:particles{p=lava;a=50;hS=1;vS=1}
+  - effect:sound{s=random.explode;v=1;p=0}
+  - potion{type=HARM;duration=5;level=1}
+InfernoIgnite:
+  Skills:
+  - ignite{ticks=500}
+  - effect:firework{t=4;c=f4dc42;d=0;f=false;tr=false}
+  - cgdamage{damage=500}
+  - delay 7
+  - cgdamage{damage=500}
+  - delay 7
+  - cgdamage{damage=500}
+  - delay 7
+InfernalBomb:
+  Skills:
+  - bomb{damage=800;radius=5;type=BURST;color=244,66,66;tick=2;duration=5}
+DragTick:
+  Skills:
+  - effect:particles{p=reddust;c=#000000;a=20;hs=0.2;vs=0.2;s=0;y=2.0} @Self
+  - effect:particles{p=reddust;c=#000000;a=2;hs=0.4;vs=0.4;s=0;y=2.0} @Self
+  - pull{velocity=1} @PIR
+  - pull{velocity=2} @PIR
+  - pull{velocity=3} @PIR
+  - pull{velocity=4} @PIR
+  - damage{amount=2;ignoreArmor=true} @LivingEntitiesInRadius{r=2}
+HellDrag:
+  Skills:
+  - sendtitle{title="&l<mob.name>";subtitle="&cI will drag you to hell";d=30;fi=15;fo=15}
+  - skill{s=DragTick}
+  - delay 0.5
+  - skill{s=DragTick}
+  - delay 0.5
+  - skill{s=DragTick}
+  - delay 0.5
+  - skill{s=DragTick}
+  - delay 0.5
+  - skill{s=DragTick}
+  - delay 0.5
+  - skill{s=DragTick}
+  - delay 0.5
+  - skill{s=DragTick}
+  - delay 0.5
+  - skill{s=DragTick}
+  - delay 0.5
+  - skill{s=DragTick}
+  - delay 0.5
+  - skill{s=DragTick}
+  - delay 0.5
+LavaHeal:
+  Conditions:
+  - inblock LAVA
+  Skills:
+  - message{m="&f[&c!&f] <mob.name> is getting healed by lava!"} @PIR{r=25}
+  - heal{amount=20} @Self
+OnAwoken:
+  Skills:
+  - sendtitle{title="&4! Warning !";subtitle="&4Inferno &ehas been awoken!";d=30;fi=15;fo=15} @PIR{r=25}
+  - summon{type=InfernoUndying;amount=1;radius=1} @Self
+  - effect:particles{p=lava;a=50;;hS=1;vS=1} @Self
+  - effect:sound{s=random.explode;v=1;p=0} @PIR{r=25}
+InfernoBarrage:
+  Skills:
+  - sendtitle{title="&l<mob.name>;subtitle="&4This is only the BEGINNING!";d=30;fi=15;fo=15}
+  - effect:firework{t=1;d=1;f=true;tr=true;c=#8F140D} @PIR{r=30}
+  - explosion{yield=3} @PIR{r=30}
+  - cgdamage{damage=500} @PIR{r=25}
+  - effect:firework{t=4;d=1;f=true;tr=true;c=#7FFF00} @PIR{r=30}
+  - delay 5
+  - effect:firework{t=0;d=1;f=true;tr=true;c=#7FFF00} @PIR{r=30}
+  - delay 5
+  - effect:firework{t=1;d=1;f=true;tr=true;c=#7FFF00} @PIR{r=30}
+  - shootfireball{y=4;v=4} @PIR{r=30}
+  - effect:firework{t=0;d=1;f=true;tr=true;c=#7FFF00} @PIR{r=30}
+  - cgdamage{damage=500} @PIR{r=25}
+  - delay 25
+  - sendtitle{title="&l<mob.name>;subtitle="&6I'm not done YET!";d=30;fi=15;fo=15}
+  - effect:firework{t=1;d=1;f=true;tr=true;c=#8F140D} @PIR{r=30}
+  - explosion{yield=3} @PIR{r=30}
+  - cgdamage{damage=500} @PIR{r=25}
+  - effect:firework{t=4;d=1;f=true;tr=true;c=#FFD700} @PIR{r=30}
+  - delay 5
+  - effect:firework{t=0;d=1;f=true;tr=true;c=#FFD700} @PIR{r=30}
+  - delay 5
+  - effect:firework{t=1;d=1;f=true;tr=true;c=#FFD700} @PIR{r=30}
+  - shootfireball{y=4;v=4} @PIR{r=30}
+  - effect:firework{t=0;d=1;f=true;tr=true;c=#FFD700} @PIR{r=30}
+  - cgdamage{damage=500} @PIR{r=25}
+  - delay 25
+  - sendtitle{title="&l<mob.name>;subtitle="&cYOU WILL NOW PERISH";d=30;fi=15;fo=15}
+  - effect:firework{t=1;d=1;f=true;tr=true;c=#8F140D} @PIR{r=30}
+  - explosion{yield=3} @PIR{r=30}
+  - cgdamage{damage=500} @PIR{r=25}
+  - effect:firework{t=4;d=1;f=true;tr=true;c=#8F140D} @PIR{r=30}
+  - delay 5
+  - effect:firework{t=0;d=1;f=true;tr=true;c=#8F140D} @PIR{r=30}
+  - delay 5
+  - effect:firework{t=1;d=1;f=true;tr=true;c=#8F140D} @PIR{r=30}
+  - shootfireball{y=4;v=4} @PIR{r=30}
+  - effect:firework{t=0;d=1;f=true;tr=true;c=#8F140D} @PIR{r=30}
+  - cgdamage{damage=500} @PIR{r=25}
+  - delay 25

@@ -1,0 +1,43 @@
+DeathDeath:
+  Skills:
+  - damage{a=5} @PIR{r=10} 
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - delay 200
+  - damage{a=5} @PIR{r=10} 
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - delay 200
+  - damage{a=5} @PIR{r=10} 
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - delay 200
+  - damage{a=5} @PIR{r=10} 
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - delay 200
+  - damage{a=5} @PIR{r=10} 
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - delay 200
+  - damage{a=5} @PIR{r=10} 
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - effect:smoke @PIR{r=10}
+  - delay 200
+Corruption:
+  Skills:
+  - message{m="<mob.name> &fhas &8corrupted &6<trigger.name>&f!"} @PIR{r=10}
+  - potion{t=SLOW;d=500;l=4} @Trigger
+  - potion{t=WITHER;d=600;l=1} @Trigger

@@ -1,0 +1,6 @@
+OnWardenDeath:
+  Skills:
+  - throw{v=15;vy=3} @PIR{r=15}
+  - damage{a=5} @PIR{r=15}
+  - summon{t=MainGraveyardWarden;a=1} @Self
+  - ignite{t=150} @PIR{r=15}
