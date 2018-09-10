@@ -1,4 +1,4 @@
-# Bosses
+# Medieval Lords Bosses 
 Hi, I'm assuming that you're from the Medieval Lords minecraft server if you're here.
 
 ### Reason for this repository ###
