@@ -1,0 +1,99 @@
+SkeletonTrio:
+  Type: SKELETON
+  Display: '&6Skeleton Trio'
+  Health: 1550
+  Modules:
+    ThreatTable: true
+  Damage: 13
+  Skills:
+  - potion{type=POISON;duration=70;level=2} @target ~onAttack 0.4
+  - potion{type=SLOW;duration=67;level=1} @target ~onAttack
+  - summon{type=SkeletonTrioWither;amount=1;radius=0} @Self ~onSpawn 1.0
+  - summon{type=SkeletonTrioFlame;amount=1;radius=0} @Self ~onSpawn 1.0
+  - effect:firework{t=1;d=0;f=true;tr=false} @self ~onDamaged 0.2
+  - damage{a=2} @target ~onAttack
+  Equipment:
+  - SkeletonTrioPoisonSword:0
+  - SkeletonTrioC:3
+  Drops:
+  - nether_star 3-4 1
+  - redstone 32-52 1
+  - speckled_melon 9-13 1
+  - gold_ingot 9-15
+  - RandomCarbyneGear 1-2 1.0
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.3
+    MaxCombatDistance: 30
+    PreventOtherDrops: true
+    ShowHealth: true
+    KnockbackResistance: 1
+SkeletonTrioWither:
+  Type: WITHER_SKELETON
+  Display: ''
+  Health: 2400
+  Damage: 7
+  Modules:
+    ThreatTable: true
+  Skills:
+  - potion{type=WITHER;duration=200;level=1} ~onDamaged @target 0.3
+  - effect:firework{t=1;d=0;f=true;tr=false} @self ~onDamaged 0.2
+  - skill{s=SkeletonTrioWitherSkullBarrage} ~onTimer:400
+  - damage{a=10} @target ~onAttack
+  #-------------------------------------------------
+  - skill{s=SkeletonTrioWitherSpell} @PIR{r=20} =2300
+  - skill{s=SkeletonTrioWitherSpell} @PIR{r=20} =2000
+  - skill{s=SkeletonTrioWitherSpell} @PIR{r=20} =2200
+  - skill{s=SkeletonTrioWitherSpell} @PIR{r=20} =1700
+  - skill{s=SkeletonTrioWitherSpell} @PIR{r=20} =1300
+  - skill{s=SkeletonTrioWitherSpell} @PIR{r=20} =900
+  - skill{s=SkeletonTrioWitherSpell} @PIR{r=20} =400
+  - skill{s=SkeletonTrioBomb} @TargetLocation =2300
+  - skill{s=SkeletonTrioBomb} @TargetLocation =1800
+  - skill{s=SkeletonTrioBomb} @TargetLocation =1300
+  - skill{s=SkeletonTrioBomb} @TargetLocation =1000
+  - skill{s=SkeletonTrioBomb} @TargetLocation =450
+  Equipment:
+  - SkeletonTrioWitherBow:0
+  Drops:
+  - nether_star 2-3 1
+  - redstone 32-52 1
+  - speckled_melon 9-13 1
+  - gold_ingot  5-10 1
+  - RandomCarbyneGear 1 1.0
+  - SkeletonTrioBow
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.3
+    MaxCombatDistance: 30
+    PreventOtherDrops: true
+    ShowHealth: true
+    KnockbackResistance: 1
+SkeletonTrioFlame:
+  Type: SKELETON
+  Display: ''
+  Health: 2500
+  Modules:
+    ThreatTable: true
+  Damage: 7
+  Skills:
+  - potion{type=INVISIBILITY;duration=67;level=1} @self ~onTimer:250
+  - potion{type=BLINDNESS;duration=67;level=1} @target ~onAttack
+  - effect:firework{t=1;d=0;f=true;tr=false} @self ~onDamaged 0.2
+  - skill{s=SkeletonTrioFlameSkill} ~onTimer:230
+  Equipment:
+  - SkeletonTrioFlameSword:0
+  Drops:
+  - nether_star 2-3 1
+  - redstone 32-52 1
+  - speckled_melon 9-13 1
+  - gold_ingot 9-15
+  - RandomCarbyneGear 1 1.0
+  - ArmorsPack 2-3 0.5
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.3
+    MaxCombatDistance: 30
+    PreventOtherDrops: true
+    ShowHealth: true
+    KnockbackResistance: 1

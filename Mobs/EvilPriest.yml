@@ -1,0 +1,67 @@
+EvilPriest:
+  Type: WITCH
+  Display: '&aEvil Priest'
+  Health: 400
+  Skills:
+  #------[Skills]--------
+  - summon{t=CorruptedFollower} @Self ~onDamaged 0.06
+  #------[Messages]--------
+  - cgdamage{damage=250} @Target ~onDamaged 0.3
+  - message{m="<mob.name>&f<&co> &fDon't you see the light?!"} @Target =300
+  - message{m="<mob.name>&f<&co> &fHAHA, is this all you got?"} @Target =150
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Drops:
+  - book 8-10 1
+  - redstone 10-15 1
+  - iron_ingot 15-25 1
+  - diamond 6-12 1
+  - nether_star 1 0.35
+  - exp 150 1
+  - gold_ingot 13-15 1
+  - ViciousKey 1 0.05
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.26
+    MaxCombatDistance: 8
+    ShowHealth: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    FollowRange: 10
+    KnockbackResistance: 0.66
+  DamageModifiers: 
+  - PROJECTILE 0.35
+  - FIRE_TICK 1.3
+  - MAGIC 1.2
+CorruptedFollower:
+  Type: ZOMBIE
+  Display: '&aCorruped Follower'
+  Health: 65
+  Damage: 110
+  Equipment:
+  - leather_chestplate:3
+  - leather_leggings:2
+  - iron_boots:1
+  - book:0
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Drops:
+  - gold_ingot 1-3 1
+  - book 1-2 1
+  - exp 10 1
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.28
+    MaxCombatDistance: 8
+    ShowHealth: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    FollowRange: 10
+    KnockbackResistance: 0.66

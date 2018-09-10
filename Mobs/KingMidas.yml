@@ -1,0 +1,117 @@
+RebornMidas:
+  Type: ZOMBIE
+  Display: '&cReborn King, Midas'
+  Health: 2500
+  Damage: 300
+  Skills:
+  #------[Skills]--------
+  - skill{s=GetGold} ~onDamaged 0.08
+  - skill{s=StealGold} ~onDamaged 0.09
+  - skill{s=DecayTouch} ~onDamaged 0.05
+  - skill{s=Goldentouch} ~onDamaged 0.09
+  - cgdamage{damage=400} @PIR{r=15} ~onDamaged 0.09
+  #------[Summoning]--------
+  - summon{t=ServantofMidas;a=2} @Self =2300
+  - summon{t=ServantofMidas;a=2} @Self =1900
+  - summon{t=ServantofMidas;a=2} @Self =1500
+  - summon{t=RoyalGuard;a=2} @PIR{r=15} =1200
+  - summon{t=ServantofMidas;a=1} @PIR{r=15} =900
+  - summon{t=RoyalGuard;a=1} @PIR{r=15} =900
+  - summon{t=RoyalGuard;a=2} @PIR{r=15} =400
+  - summon{t=ServantofMidas;a=2} @PIR{r=15} =400
+  #------[Messages]--------
+  - message{m="<mob.name>&f<&co> Who dares to disturb me!"} @PIR{r=15} =2300
+  - message{m="<mob.name>&f<&co> Do you want some &6gold&f?"} @PIR{r=15} =1900
+  - message{m="<mob.name>&f<&co> You will &4suffer &fas I had!"} @PIR{r=15} =1500
+  - message{m="<mob.name>&f<&co> Guards, take them away!"} @PIR{r=15} =1200
+  - message{m="<mob.name>&f<&co> I feel &cGREAT&f!"} @PIR{r=15} =900
+  - message{m="<mob.name>&f<&co> This &cWILL &cNOT &fbe the end!"} @PIR{r=15} =400
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment: 
+  - gold_helmet:4
+  - gold_chestplate:3
+  - ReaperLeggings:2
+  - ReaperBoots:1
+  - gold_ingot:0                       
+  Drops:
+  - nether_star 4-5 1
+  - iron_ingot 40-55 1
+  - diamond 15-30 1
+  - gold_block 25-30 1
+  - ViciousKey 1 0.7
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true
+  DamageModifiers: 
+RoyalGuard:
+  Type: SKELETON
+  Display: '&aRoyal Guard'
+  Health: 250
+  Damage: 125
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:   
+  - gold_helmet:4
+  - gold_chestplate:3
+  - iron_leggings:2
+  - leather_boots:1
+  - gold_sword:0                     
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_ingot 1-10 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true
+  DamageModifiers: 
+ServantofMidas:
+  Type: ZOMBIE
+  Display: '&aServant of Midas'
+  Health: 100
+  Damage: 150
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:   
+  - leather_helmet:4
+  - leather_chestplate:3
+  - leather_leggings:2
+  - leather_boots:1
+  - stone_hoe:0                 
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_ingot 1-5 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.32
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true
+

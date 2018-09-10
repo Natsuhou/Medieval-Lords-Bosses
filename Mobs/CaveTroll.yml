@@ -1,0 +1,22 @@
+CaveTroll:
+  Type: IRON_GOLEM
+  Display: '&aCave Troll'
+  Health: 800
+  Damage: 500
+  Skills:
+  - effect:flames @self ~onDamaged 0.3
+  - skill{skill=CaveTrollIgnite} ~onDamaged @trigger 0.1
+  - throw{velocity=15;velocityY=5} @target ~onAttack 0.4
+  - skill{s=HB} ~onDamaged
+  Drops:
+  - CaveTrollDrops
+  - RandomCarbyneGear 1 0.3
+  - 399:0 1 0.3
+  - ViciousKey 1 0.1
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.3
+    ShowHealth: true
+    MaxCombatDistance: 7

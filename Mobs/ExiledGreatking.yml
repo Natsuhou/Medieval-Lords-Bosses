@@ -1,0 +1,22 @@
+ExiledGreatking:
+  Type: WITHER_SKELETON
+  Display: '&0Exiled Greatknight'
+  Health: 1800
+  Damage: 7
+  Skills:
+  - skill{s=ExiledGreatkingMount} ~onTimer:630 @target
+  - skill{s=ExiledGreatkingPotions} ~onDamaged @target 0.04
+  - skill{s=ExiledGreatknightHealInWater} ~onDamaged @self
+  - message{m="<mob.name>&a has been killed by &7<trigger.name>"} ~onDeath @PlayersOnServer
+  Drops:
+  - ExiledGreatkingDrops
+  - RandomCarbyneGear 1 0.4
+  Equipment:
+  - FakeWarhammer:0
+  - ExiledGreatkingChestplate:3
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.37
+    ShowHealth: true
+    MaxCombatDistance: 7
+

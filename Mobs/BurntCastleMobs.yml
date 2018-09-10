@@ -1,0 +1,238 @@
+BurntCastleUndeadSkeleton:
+  Type: SKELETON
+  Display: '&eUndead Skeleton'
+  Health: 200
+  Damage: 25
+  Skills:
+  - damage{amount=4} ~onAttack @Target 0.08
+  - potion{type=WEAKNESS;duration=200;level=2} ~onAttack @Target 0.3
+  - potion{type=SLOW;duration=380;level=3} @Target ~onAttack 0.3
+  #------[Heal]-------
+  - skill{s=Heal10} @Trigger ~onDeath 0.4
+  #------[HealthBar]-------
+  - skill{s=HB} ~onDamaged
+  Drops:
+  - gold_ingot 3-4 1
+  - coal 1-10 1
+  - iron_ingot 4-6 1
+  Equipment:
+  - iron_helmet:4
+  - iron_chestplate:3
+  - iron_sword:0
+  - ReaperLeggings:2
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 5
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.55
+###############################################################################################################################
+BurntCastleUndeadZombie:
+  Type: ZOMBIE
+  Display: '&eUndead Zombie'
+  Health: 200
+  Damage: 28
+  Skills:
+  - damage{amount=8} ~onAttack @target 0.08
+  - potion{type=WEAKNESS;duration=200;level=2} ~onAttack @target 0.3
+  - potion{type=SLOW;duration=380;level=3} @target ~onAttack 0.3
+  #------[Heal]-------
+  - skill{s=Heal10} @Trigger ~onDeath 0.4
+  #------[HealthBar]-------
+  - skill{s=HB} ~onDamaged
+  Drops:
+  - iron_ingot 2-4 1
+  - gold_ingot 3-5 1
+  - coal 2-3 1
+  Equipment: 
+  - iron_helmet:4
+  - iron_chestplate:3
+  - ReaperLeggings:2
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 5
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.88
+###############################################################################################################################
+BurntCastleUndeadEliteZombie:
+  Type: ZOMBIE
+  Display: '&cElite Undead Zombie'
+  Health: 450
+  Damage: 29
+  Skills:
+  - damage{amount=5} ~onAttack @target 0.08
+  - potion{type=WEAKNESS;duration=200;level=2} ~onAttack @target 0.3
+  - potion{type=SLOW;duration=380;level=3} @target ~onAttack 0.3
+  #------[Heal]-------
+  - skill{s=Heal20} @Trigger ~onDeath 0.6 
+  #------[HealthBar]-------
+  - skill{s=HB} ~onDamaged
+  Equipment:
+  - ReaperHelmet:4
+  - diamond_chestplate:3
+  - ReaperLeggings:2
+  - iron_boots:1
+  - stone_sword:0
+  Drops:
+  - iron_ingot 1-5 1
+  - gold_ingot 7-9 1
+  - diamond 1-3 0.5
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 5
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.55
+###############################################################################################################################
+BurntCastleUndeadEliteSkeleton:
+  Type: WITHER_SKELETON
+  Display: '&cElite Skeleton'
+  Health: 450
+  Damage: 28
+  Skills:
+  #------[Heal]-------
+  - skill{s=Heal20} @Trigger ~onDeath 0.9
+  #------[HealthBar]-------
+  - skill{s=HB} ~onDamaged
+  Equipment:
+  - GaiaHelmet:4
+  - ReaperChestplate:3
+  - diamond_leggings
+  - diamond_sword:0
+  Drops:
+  - iron_ingot 5-9 1
+  - gold_ingot 5-9 0.5
+  - diamond 1-7 0.5
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 5
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.28
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.62
+###############################################################################################################################
+BurntCastleSpider:
+  Type: SPIDER
+  Display: '&eCastle Spider'
+  Health: 185
+  Damage: 28
+  Skills:
+  - damage{amount=9} ~onAttack @target 0.1
+  - potion{type=WEAKNESS;duration=200;level=2} ~onAttack @target 0.3
+  - potion{type=BLINDNESS;duration=60;level=1} ~onAttack @target 0.1
+  - potion{type=SLOW;duration=380;level=3} @target ~onAttack 0.3
+  #------[Heal]-------
+  - skill{s=Heal20} @Trigger ~onDeath 0.8
+  #------[HealthBar]-------
+  - skill{s=HB} ~onDamaged
+  Drops:
+  - iron_ingot 1-3 0.5
+  - gold_ingot 3-5 0.5
+  - diamond 1-3 0.5
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 5
+    ShowHealth: true
+    Despawn: false
+    MovementSpeed: 0.31
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.62
+###############################################################################################################################
+BurntCastleCaveSpider:
+  Type: CAVE_SPIDER
+  Display: '&aCastle Spiderling'
+  Health: 135
+  Damage: 20
+  Skills:
+  - damage{amount=5} ~onAttack @target 0.1
+  - potion{type=WEAKNESS;duration=200;level=2} ~onAttack @target 0.3
+  - potion{type=BLINDNESS;duration=60;level=1} ~onAttack @target 0.1
+  - potion{type=SLOW;duration=380;level=3} @target ~onAttack 0.3
+  #------[Heal]-------
+  - skill{s=Heal10} @Trigger ~onDeath 0.5
+  #------[HealthBar]-------
+  - skill{s=HB} ~onDamaged
+  Drops:
+  - gold_ingot 1-2 1
+  - iron_ingot 1-5 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 5
+    ShowHealth: true
+    Despawn: false
+    MovementSpeed: 0.33
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.65 
+###############################################################################################################################
+BurntCastleUndeadEliteZombieGuard:
+  Type: PIG_ZOMBIE
+  Display: '&cElite Undead Guard'
+  Health: 425
+  Damage: 26
+  Skills:
+  - damage{amount=5} ~onAttack @Target 0.1
+  #------[Heal]-------
+  - skill{s=Heal30} @Trigger ~onDeath 0.8
+  #------[HealthBar]-------
+  - skill{s=HB} ~onDamaged
+  Equipment:
+  - ReaperHelmet:4
+  - gold_chestplate:3
+  - gold_leggings:2
+  - iron_sword:0
+  Drops:
+  - gold_ingot 8-12 1
+  - diamond 6-9 1
+  - coal 5-10 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 5
+    ShowHealth: true
+    Despawn: false
+    MovementSpeed: 0.23
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.66
+

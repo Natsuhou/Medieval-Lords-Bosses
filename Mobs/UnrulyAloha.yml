@@ -1,0 +1,110 @@
+UnrulyAloha:
+  Type: PIG_ZOMBIE
+  Display: '&cUnruly fiend, Aloha'
+  Health: 2800
+  Damage: 150
+  BossBar:
+    Enabled: false
+  Options:
+    PreventOtherDrops: True
+    PreventRandomEquipment: True
+  Modules:
+    ThreatTable: true
+  Drops: 
+  - 373:16389 9 1
+  - nether_star 6-7 1
+  - 373:16389 3-6 1
+  - gold_ingot 42 1
+  - redstone 64 1
+  - diamond 20-28 0.5
+  - iron_ingot 25-32 1
+  - gunpowder 15-20 1
+  - RandomCarbyneGear 2-3 1
+  DamageModifiers:
+  - PROJECTILE 0.40
+  Equipment:
+  - ColdBloodLegs:2
+  - gold_boots:1
+  - diamond_axe:0
+  Skills:
+  #---- ( Base ) ----
+  #---- ( Cooldown Skills ) ----
+  - skill{s=Stab} >0 ~OnCombat 0.60
+  - skill{s=Mount} >0 ~OnCombat 0.55
+  - skill{s=KillingSpree} >0 ~onDamaged 0.35
+  #---- ( Effects ) ----
+  - effect:firework{t=1;colors=FF5555;d=0} @Self =2500 1.0
+  - effect:firework{t=1;colors=FF5555;d=0} @Self =2300 1.0
+  - effect:firework{t=1;colors=FF5555;d=0} @Self =1800 1.0
+  - effect:firework{t=1;colors=FF5555;d=0} @Self =1400 1.0 
+  - effect:firework{t=1;colors=FF5555;d=0} @Self =800 1.0
+  - effect:firework{t=1;colors=FF5555;d=0} @Self =400 1.0
+  - effect:firework{t=1;colors=FF5555;d=0} @Self =100 1.0
+  #---- ( Skills ) ----
+  - summon{t=Inmate;a=3;r=5;os=true} @Origin ~onCombat =2500 1.0
+  - summon{t=Murderer;a=1;r=5;os=true} @Origin ~onCombat =2300 1.0
+  - summon{t=Inmate;a=3;r=5;os=true} @Origin ~onCombat =2300 1.0
+  - summon{t=Inmate;a=2;r=5;os=true} @Origin ~onCombat =1800 1.0
+  - summon{t=Inmate;a=3;r=5;os=true} @Origin ~onCombat =1800 1.0
+  - summon{t=Inmate;a=4;r=5;os=true} @Origin ~onCombat =1400 1.0
+  - summon{t=Murderer;a=2;r=5;os=true} @Origin ~onCombat =1400 1.0
+  - summon{t=Inmate;a=6;r=5;os=true} @Origin ~onCombat =800 1.0
+  - summon{t=Inmate;a=3;r=5;os=true} @Origin ~onCombat =400 1.0
+  - summon{t=Murderer;a=2;r=5;os=true} @Origin ~onCombat =400 1.0
+  - summon{t=Murderer;a=4;r=5;os=true} @Origin ~onCombat =100 1.0
+  #---- ( Messages ) ----
+  - message{m="<mob.name>&f<&co> You cannot stop us!"} @PIR{r=30} =2500 1.0
+  - message{m="<mob.name>&f<&co> Sick em boys!"} @PIR{r=30} =2300 1.0
+  - message{m="<mob.name>&f<&co> Show them no mercy!"} @PIR{r=30} =1800 1.0
+  - message{m="<mob.name>&f<&co> WE WILL WIN!"} @PIR{r=30} =1400 1.0
+  - message{m="<mob.name>&f<&co> IS THAT ALL YOU GOT!"} @PIR{r=30} =800 1.0
+  - message{m="<mob.name>&f<&co> THIS ISN'T THE END!"} @PIR{r=30} =400 1.0
+  - message{m="<mob.name>&f<&co> I WILL NOT LOSE!"} @PIR{r=30} =100 1.0
+  #---- ( HealthBar ) ----
+  - skill{s=HB} ~onDamaged
+DeadlyInmate:
+  Type: ZOMBIE
+  Display: '&5Deadly Inmate'
+  Health: 150
+  Damage: 100
+  BossBar:
+    Enabled: false
+  Options:
+    PreventOtherDrops: True
+    PreventRandomEquipment: True
+  Drops:
+  - 399 1 .30
+  - redstone 3-5 1
+  - gold_ingot 1-3 1
+  - speckled_melon 1-3 1
+  DamageModifiers:
+  - PROJECTILE -0.10
+  Equipment:
+  - leather_chestplate:4
+  - flint:0
+  Skills:
+  - skill{s=Rampage} >0 ~onAttack 0.55
+Murderer:
+  Type: ZOMBIE
+  Display: '&5Murderer'
+  Health: 250
+  Damage: 250
+  BossBar:
+    Enabled: false
+  Options:
+    PreventOtherDrops: True
+    PreventRandomEquipment: True
+  Drops:
+  - Shank 1 0.3
+  - redstone 3-5 1
+  - gold_ingot 1-3 1
+  - speckled_melon 1-3 1
+  DamageModifiers:
+  - PROJECTILE -0.10
+  Equipment:
+  - leather_chestplate:4
+  - flint:0
+  Skills:
+  - skill{s=Rampage} >0 ~onAttack 0.55
+  #---- ( HealthBar ) ----
+  - skill{s=HB} ~onDamaged

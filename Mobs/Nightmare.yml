@@ -1,0 +1,128 @@
+Nightmare:
+  Type: WITHER_SKELETON 
+  Display: '&eNightmare, Lahioa'
+  Health: 1000
+  Damage: 35
+  Skills:
+  #------[Skills]--------
+  - damage{a=5} @Target ~onDamaged 0.25
+  - damage{a=4} @PIR{r=10} =200
+  #------[Summoning]--------
+  - summon{t=CorruptedSoul;a=2} @Self ~onDamaged 0.22
+  - summon{t=Maoiah;a=3} @Self =500
+  #------[Messages]--------
+  - message{m="<mob.name>&f<&co> &fHush, it will be over &8soon"} @PIR{r=15} =800 
+  - message{m="<mob.name>&f<&co> &fDo you hear &3that&f?"} @PIR{r=15} =500 
+  - message{m="<mob.name>&f<&co> &4&kHaha, the end is near"} @PIR{r=15} =200 
+  - message{m="<mob.name>&f<&co> &fI will &4KILL YOU!"} @PIR{r=15} =100
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:                        
+  Modules:
+    ThreatTable: true
+  Drops:
+  - nether_star 4-5 1
+  - coal 64-128 1
+  - bread 15-64 1
+  - diamond 20-35 1
+  - gold_ingot 45-64 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.31
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventRandomDrops: true
+    PreventTeleport: true
+    FollowRange: 15
+    KnockbackResistance: 0.83
+    MaxCombatDistance: 5
+  DamageModifiers: 
+  - MAGIC 0.5
+  - PROJECTILE 0.25
+  - LAVA 0.2
+  - FALL 0.25
+  - LIGHTNING 0.1
+  - FIRE 0.25
+Maoiah:
+  Type: SKELETON
+  Display: '&8Maoiah'
+  Health: 50
+  Damage: 18
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:                        
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_nugget 1-5 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventRandomDrops: true
+    PreventTeleport: true
+    FollowRange: 15
+    KnockbackResistance: 0.83
+    MaxCombatDistance: 5
+  DamageModifiers: 
+  - MAGIC 0.5
+  - PROJECTILE 0.25
+  - LAVA 0.2
+  - FALL 0.25
+  - LIGHTNING 0.1
+  - FIRE 0.25
+CorruptedSoul:
+  Type: ZOMBIE
+  Display: '&0Corrupted Soul'
+  Health: 20
+  Damage: 15
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:                        
+  Modules:
+    ThreatTable: true
+  Drops:
+  - iron_ingot 1-5 1
+  - gold_nugget 1-5 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.32
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventRandomDrops: true
+    PreventTeleport: true
+    FollowRange: 15
+    KnockbackResistance: 0.83
+    MaxCombatDistance: 5
+  DamageModifiers: 
+  - MAGIC 0.5
+  - PROJECTILE 0.25
+  - LAVA 0.2
+  - FALL 0.25
+  - LIGHTNING 0.1
+  - FIRE 0.25
+
+
+
+

@@ -1,0 +1,47 @@
+Drider:
+  Type: SKELETON
+  Display: '&8Drider'
+  Health: 60
+  Damage: 11
+  Skills:
+  #------- [Summon] -------
+  - mount{type=TombSpider} ~onSpawn
+  #-------[HealthBar]-------
+  - skill{s=HB} ~onDamage
+  Equipment:
+  - driderSword:0
+  - driderBoots:1
+  - driderLeggings:2
+  - driderChestplate:3  
+  - driderHelmet:4  
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_nugget 5-8
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+TombSpider:
+  Type: SPIDER
+  Display: '&8Tomb Spider'
+  Health: 40
+  Damage: 10
+  Skills:
+  #------- [Skills] -------
+  - potion{t=SLOW;d=34;l=3} @Target ~onAttack 1
+  #-------[HealthBar]-------
+  - skill{s=HB} ~onDamage
+  Equipment:                            
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_nugget 5-8
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    MovementSpeed: 0.27
+    PreventOtherDrops: true

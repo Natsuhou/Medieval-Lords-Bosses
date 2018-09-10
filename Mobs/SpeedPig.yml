@@ -1,0 +1,29 @@
+SpeedPig:
+  Type: PIG
+  Display: '&8Pig of Speed'
+  Health: 30
+  Damage: 3
+  Skills:
+  #------- [Skills] -------
+  - potion{t=SPEED;d=400;l=2} @Trigger ~onDeath
+  #------- [HealthBar] -------
+  - skill{s=HB} ~onDamaged
+  Equipment:                            
+  Modules:
+    ThreatTable: true
+  Drops:
+  - golden_apple 1-2 0.05
+  - dirt 1 1
+  - gold_ingot 1-3 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    PreventOtherDrops: true
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true

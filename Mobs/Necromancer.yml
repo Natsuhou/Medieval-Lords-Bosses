@@ -1,0 +1,75 @@
+Necromancer:
+  Type: ZOMBIE_VILLAGER
+  Display: '&5Necromancer'
+  Health: 2500
+  Damage: 25
+  BossBar:
+    Enabled: false
+  Options:
+    PreventOtherDrops: True
+    PreventRandomEquipment: True
+ Modules:
+  ThreatTables: True
+  Drops:
+  - MagicalRod 1 .25
+  - 399 5-6 1
+  - redstone 40-50
+  - diamond 10-20 1
+  - speckled_melon 5-12 1
+  - redstone 64 1
+  - nether_star 2-4 1
+  DamageModifiers:
+  - PROJECTILE 0.50
+  Equipment:
+  - NecromancerChest:3
+  - NecromancerLegs:2
+  - gold_boots:1
+  - book:0
+  Skills:
+  #---- ( Cooldown Skills ) ----
+  - skill{s=DemonicPossesion} >0 0.60
+  - skill{s=SelfEnpowerment} >0 0.75
+  - skill{s=GodsWrath} >0 0.80
+  #---- ( Skills ) ----
+  - summon{t=RattlingHusk;a=3;r=5;os=true} @Origin ~onCombat =2300 1.0
+  - summon{t=RattlingHusk;a=5;r=5;os=true} @Origin ~onCombat =1600 1.0
+  - summon{t=RattlingHusk;a=5;r=5;os=true} @Origin ~onCombat =1300 1.0
+  - summon{t=RattlingHusk;a=8;r=5;os=true} @Origin ~onCombat =1000 1.0
+  - summon{t=RattlingHusk;a=8;r=5;os=true} @Origin ~onCombat =500 1.0
+  - shootpotion{type=HUNGER;duration=100;level=1;velocity=5} @PIR{r=30} ~onCombat =500 0.20
+  - shootpotion{type=SLOW;duration=60;level=1;velocity=5} @PIR{r=30} ~onCombat =1000 1.0 0.10
+  - shootpotion{type=POISON;duration=100;level=2;velocity=5} @PIR{r=30} ~Oncombat >0 0.06
+  - shootpotion{type=HARM;duration=1;level=1;velocity=5} @PIR{r=30} ~OnCombat <250 0.05
+  #---- ( Effects ) ----
+  - effect:firework{t=1;colors=55FFFF;d=0} @Self =2300 1.0
+  - effect:firework{t=0;colors=555555;d=0} @Self =1600 1.0
+  - effect:firework{t=1;colors=AA00AA;d=0} @Self =1300 1.0
+  - effect:firework{t=0;colors=55FFFF;d=0} @Self =1000 1.0
+  - effect:firework{t=1;colors=555555;d=0} @Self =500 1.0
+  #---- ( Base Damage ) ----
+  - damage{a=20} ~onAttack @target
+  #---- ( HealthBar ) ----
+  - skill{s=HB} ~onDamaged
+  #---- ( Messages ) ----
+  - message{m="<mob.name>&f<&co> Who do you think you are!"} @PIR{r=30} =2300 1.0
+  - message{m="<mob.name>&f<&co> Let's try something new!"} @PIR{r=30} =1600 1.0
+  - message{m="<mob.name>&f<&co> Is that all you got!"} @PIR{r=30} =1300 1.0
+  - message{m="<mob.name>&f<&co> HAHA YOU WILL DIE!"} @PIR{r=30} =1000 1.0
+  - message{m="<mob.name>&f<&co> I WILL NEVER LOSE TO YOU!"} @PIR{r=30} =500 1.0
+RattlingHusk:
+  Type: SKELETON
+  Display: '&5Rattling Husk'
+  Health: 90
+  Damage: 8
+  BossBar:
+    Enabled: false
+  Options:
+    PreventOtherDrops: True
+    PreventRandomEquipment: True
+  Drops:
+  - 399 1 0.02
+  DamageModifiers:
+  - PROJECTILE 0.40
+  Equipment:
+  Skills:
+  - skill{s=HB} ~onDamaged

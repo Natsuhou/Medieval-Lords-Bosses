@@ -1,0 +1,125 @@
+BanditDrake:
+  Type: ZOMBIE_VILLAGER
+  Display: '&cUndead Bandit, Drake'
+  Health: 2200
+  Damage: 13
+  BossBar:
+    Enabled: false
+  Options:
+    PreventOtherDrops: True
+    PreventRandomEquipment: True
+    KnockbackResistance: 0.75
+  Modules:
+    ThreatTable: true
+  Drops:
+  - 373:16389 8 1
+  - BanditHoe 1 0.25
+  - nether_star 3-5 1
+  - iron_ingot 32 1
+  - speckled_melon 15-30 1
+  - gold_ingot 15-45 1
+  - baked_potato 30-64 1
+  - diamond 15-30 1 
+  - diamond_boots 1 1
+  - RandomCarbyneGear 1 1
+  DamageModifiers:
+  - PROJECTILE 0.50
+  Equipment:
+  - leather_chestplate:3
+  - iron_leggings:2
+  - gold_boots:1
+  - BanditHoe:0
+  Skills:
+  #------( Skills )--------
+  - summon{t=UndeadInmate;a=2;r=5;os=true} @Origin ~onCombat =2000 1.0
+  - summon{t=UndeadCri;a=2;r=5;os=true} @Origin ~onCombat =1700 1.0
+  - summon{t=UndeadInmate;a=1;r=5;os=true} @Origin ~onCombat =1700 1.0
+  - summon{t=UndeadInmate;a=3;r=5;os=true} @Origin ~onCombat =1300 1.0
+  - summon{t=UndeadCri;a=1;r=5;os=true} @Origin ~onCombat =1300 1.0
+  - summon{t=UndeadCri;a=3;r=5;os=true} @Origin ~onCombat =700 1.0
+  - summon{t=UndeadInmate;a=;r=5;os=true} @Origin ~onCombat =700 1.0
+  - summon{t=UndeadCri;a=1;r=5;os=true} @Origin ~onCombat =700 1.0
+  - summon{t=UndeadCri;a=3;r=5;os=true} @Origin ~onCombat =300 1.0
+  - summon{t=UndeadInmate;a=;r=5;os=true} @Origin ~onCombat =300 1.0
+  #------( Messages )--------
+  - message{m="<mob.name>&f<&co> What do you want, punk?!"} @PIR{r=30} =2400 1.0
+  - message{m="<mob.name>&f<&co> You want me to go serious on you?"} @PIR{r=30} =2000 1.0
+  - message{m="<mob.name>&f<&co> Alright, you asked for it!"} @PIR{r=30} =1700 1.0
+  - message{m="<mob.name>&f<&co> You will not live!!"} @PIR{r=30} =1300 1.0
+  - message{m="<mob.name>&f<&co> Group up, boys!"} @PIR{r=30} =700 1.0
+  - message{m="<mob.name>&f<&co> Right hook, left hook!"} @PIR{r=30} =300 1.0
+  - message{m="<mob.name>&f<&co> I WILL NOT LOSE TO THE LIKES OF YOU!"} @PIR{r=30} =300 1.0
+  #------( Effects )--------
+  - effect:firework{t=1;colors=55FFFF;d=0} @PIR{r=300} =2400 1.0
+  - effect:firework{t=1;colors=55FFFF;d=0} @PIR{r=30} =2000 1.0
+  - effect:firework{t=0;colors=555555;d=0} @Self =1700 1.0
+  - effect:firework{t=0;colors=55FFFF;d=0} @Self =1300 1.0
+  - effect:firework{t=1;colors=555555;d=0} @Self =700 1.0
+  - effect:firework{t=1;colors=AA00AA;d=0} @Self =300 1.0
+  #------( Skill Cooldown )--------
+  - skill{s=SelfEnpowerment} >0 0.75
+  - skill{s=Implosion} >0.55 0.90
+  - skill{s=Mount} >0.55 0.40
+  - skill{s=DemonicPossesion} >0 0.60
+  #------( Base )--------
+  - damage{a=15} ~onAttack @target
+  #------( Base )--------
+  - skill{s=HB} ~onDamaged
+  #------( HealthBar )--------
+  - skill{s=HB} ~onDamaged
+UndeadInmate:
+  Type: SKELETON
+  Display: '&aUndead Inmate'
+  Health: 150
+  Damage: 10
+  BossBar:
+    Enabled: false
+  Options:
+    PreventOtherDrops: True
+    PreventRandomEquipment: True
+  Modules:
+    ThreatTable: true
+  Drops:
+  - 399 1 0.02
+  - redstone 2-4 1
+  - diamond 1-5 1
+  - gunpowder 1-3 1
+  DamageModifiers:
+  - PROJECTILE 0.40
+  Equipment:
+  - iron_chestplate:3
+  - iron_boots:1
+  - flint:0
+  Skills:
+  - damage{a=17} ~onAttack @target
+  #------( HealthBar )--------
+  - skill{s=HB} ~onDamaged
+UndeadCri:
+  Type: WITHER_SKELETON
+  Display: '&eUndead Criminal'
+  Health: 300
+  Damage: 23
+  BossBar:
+    Enabled: false
+  Options:
+    PreventOtherDrops: True
+    PreventRandomEquipment: True
+  Modules:
+    ThreatTable: true
+  Drops:
+  - 399 1 0.02
+  - redstone 1-3 1
+  - glowstone 1-2 1
+  DamageModifiers:
+  - PROJECTILE 0.40
+  Equipment:
+  - leather_helmet:4
+  - leather_chestplate:3
+  - iron_leggings:2
+  - iron_boots:1
+  - iron_sword:0
+  Skills:
+  - damage{a=15} @Target ~onDamaged 0.33
+  #------( HealthBar )--------
+  - skill{s=HB} ~onDamaged
+  

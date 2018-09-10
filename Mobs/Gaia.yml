@@ -1,0 +1,379 @@
+#Common ~ Light Grey
+#Easy ~ Light Green
+#Medium ~ Light Yelllow
+#Hard ~ Light Red
+#Insane ~ Light Purple/Pink
+#Brutal ~ Dark Purple
+Gaia:
+  Type: ZOMBIE
+  Display: '&2Corrupted Gaia'
+  Health: 150
+  Damage: 1200
+  Armor: 15
+  Skills:
+  #------[Skills]--------
+  - skill{s=GaiaSummon} @PIR{r=15} ~onDamaged 0.12
+  - skill{s=GaiaDeath} ~onDeath
+  - summon{t=AetherWidow;a=2} ~onDamaged 0.12
+  - skill{s=GaiaHeal} ~onDamaged 0.11
+  #------[Messages]--------
+  - sendtitle{title="&l<mob.name>";subtitle="&aFools, turn away or die..";d=30;fi=15;fo=15} @PIR{r=25} =145
+  - sendtitle{title="&l<mob.name>";subtitle="&aI once cared for mortals...";d=30;fi=15;fo=15} @PIR{r=25} =100
+  - sendtitle{title="&l<mob.name>";subtitle="&aBut now...";d=30;fi=15;fo=15} @PIR{r=25} =85
+  - sendtitle{title="&l<mob.name>";subtitle="&aI want them DESTROYED!!";d=30;fi=15;fo=15} @PIR{r=25} =35
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:        
+  - diamond_helmet:4         
+  - GaiaChestplate:3
+  - gold_leggings:2   
+  Modules:
+    ThreatTable: true
+  Drops:
+  - redstone 15-30 1
+  - diamond 12-30 1
+  - iron_ingot 20-25 1
+  - nether_star 3-5 1
+  - exp 1500 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.88
+AetherGaiaF1:
+  Type: ZOMBIE
+  Display: '&5Fallen Titan, Gaia'
+  Health: 3000
+  Damage: 1200
+  Armor: 5
+  Skills:
+  #------[Skills]--------
+  - skill{s=GaiaHit} ~onDamaged
+  - skill{s=GaiaSummon} ~onDamaged 0.10
+  - skill{s=FeelPain} ~onDamaged 0.11
+  - skill{s=AetherGaiaF1Death} ~onDeath
+  - skill{s=GaiaHeal} ~onDamaged 0.11
+  #------[Messages]--------
+  - sendtitle{title="&l<mob.name>";subtitle="&dDo you want to hear a story?";d=30;fi=15;fo=15} @PIR{r=25} =2800
+  - sendtitle{title="&l<mob.name>";subtitle="&dI once cared for mortals";d=30;fi=15;fo=15} @PIR{r=25} =2500
+  - sendtitle{title="&l<mob.name>";subtitle="&dUntil one day, something happened";d=30;fi=15;fo=15} @PIR{r=25} =2200
+  - sendtitle{title="&l<mob.name>";subtitle="&eZenus&d, the mortal";d=30;fi=15;fo=15} @PIR{r=25} =1900
+  - sendtitle{title="&l<mob.name>";subtitle="&dAsked for my strength...";d=30;fi=15;fo=15} @PIR{r=25} =1600
+  - sendtitle{title="&l<mob.name>";subtitle="&dIn exchange for allegiance...";d=30;fi=15;fo=15} @PIR{r=25} =1300
+  - sendtitle{title="&l<mob.name>";subtitle="&dI took the offer...";d=30;fi=15;fo=15} @PIR{r=25} =1000
+  - sendtitle{title="&l<mob.name>";subtitle="&dSince I saw potential in him...";d=30;fi=15;fo=15} @PIR{r=25} =800
+  - sendtitle{title="&l<mob.name>";subtitle="&dBut in time, he became...";d=30;fi=15;fo=15} @PIR{r=25} =600
+  - sendtitle{title="&l<mob.name>";subtitle="&dToo strong for even I...";d=30;fi=15;fo=15} @PIR{r=25} =400
+  - sendtitle{title="&l<mob.name>";subtitle="&dI was betrayed by him...";d=30;fi=15;fo=15} @PIR{r=25} =200
+  - sendtitle{title="&l<mob.name>";subtitle="&dAnd I was sent to the Aether...";d=30;fi=15;fo=15} @PIR{r=25} =50
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:              
+  - GaiaHelmet:4
+  - GaiaChestplate:3
+  - GaiaLeggings:2
+  - GaiaBoots:1
+  - stone_hoe:0          
+  Modules:
+    ThreatTable: true
+  Drops:
+  - nether_star 10-15 1
+  - redstone 60-120 1
+  - diamond 30-40 1
+  - gold_block 50-100 1
+  - exp 2000 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 5
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.19
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.9
+AetherGaiaF2:
+  Type: SKELETON
+  Display: '&8Aether Vassal, Gaia'
+  Health: 2500
+  Damage: 1200
+  Armor: 8
+  Skills:
+  #------[Skills]--------
+  - skill{s=GaiaHit} ~onDamaged
+  - skill{s=GaiaSummon} ~onDamaged 0.13
+  - skill{s=Burial} ~onDamaged 0.14
+  - skill{s=DevourSouls} ~onDamaged 0.14
+  - skill{s=FeelPain} ~onDamaged 0.12
+  - skill{s=AetherGaiaF2Death} ~onDeath
+  - skill{s=FireBallBarrage} ~onDamaged 0.15
+  - skill{s=SummonAetherWidow} ~onDamaged 0.10
+  - skill{s=GaiaHeal} ~onDamaged 0.11
+  #------[Summoning]--------
+  #------[Messages]--------
+  - sendtitle{title="&l<mob.name>";subtitle="&7After hearing my story...";d=30;fi=15;fo=15} @PIR{r=15} =2200
+  - sendtitle{title="&l<mob.name>";subtitle="&7You shall understand the reason...";d=30;fi=15;fo=15} @PIR{r=15} =1900
+  - sendtitle{title="&l<mob.name>";subtitle="&7For my wrath";d=30;fi=15;fo=15} @PIR{r=15} =1600
+  - sendtitle{title="&l<mob.name>";subtitle="&7Now, you will &4suffer&7...";d=30;fi=15;fo=15} @PIR{r=15} =1400
+  - sendtitle{title="&l<mob.name>";subtitle="&7As I have &4suffered&7...";d=30;fi=15;fo=15} @PIR{r=15} =1200
+  - sendtitle{title="&l<mob.name>";subtitle="&7You don't stand a chance...";d=30;fi=15;fo=15} @PIR{r=15} =1000
+  - sendtitle{title="&l<mob.name>";subtitle="&7Surrender, and &4D I E&7!";d=30;fi=15;fo=15} @PIR{r=15} =800
+  - sendtitle{title="&l<mob.name>";subtitle="&7I, a Titan, will not falter";d=30;fi=15;fo=15} @PIR{r=25} =600
+  - sendtitle{title="&l<mob.name>";subtitle="&7No, this CANNOT BE!";d=30;fi=15;fo=15} @PIR{r=25} =400
+  - sendtitle{title="&l<mob.name>";subtitle="&7You will REGRET this!";d=30;fi=15;fo=15} @PIR{r=25} =200
+  - sendtitle{title="&l<mob.name>";subtitle="&7Haha...!";d=30;fi=15;fo=15} @PIR{r=25} =100 
+  - sendtitle{title="&l<mob.name>";subtitle="&7Did you think that was it?";d=30;fi=15;fo=15} @PIR{r=25} =50
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:              
+  - GaiaHelmet:4
+  - GaiaChestplate:3
+  - GaiaLeggings:2
+  - GaiaBoots:1
+  - stone_hoe:0          
+  Modules:
+    ThreatTable: true
+  Drops:
+  - nether_star 15-20 1
+  - redstone 100-300 1
+  - diamond 30-50 1
+  - gold_block 50-100 1
+  - exp 5000 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 10
+    ShowHealth: true
+    Despawn: false
+    MovementSpeed: 0.34
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.9
+AetherGaiaFinal:
+  Type: WITHER_SKELETON
+  Display: '&6Reincarnated Gaia'
+  Health: 2000
+  Damage: 1200
+  Armor: 10
+  Skills:
+  #------[Skills]--------
+  - skill{s=GaiaSummon} ~onDamaged 0.11
+  - skill{s=Burial} ~onDamaged 0.14
+  - skill{s=DevourSouls} ~onDamaged 0.14
+  - skill{s=FeelPain} ~onDamaged 0.15
+  - skill{s=FireBallBarrage} ~onDamaged 0.15
+  - skill{s=GaiaHit} ~onDamaged
+  - skill{s=SummonAetherWidow} ~onDamaged 0.11
+  - skill{s=GaiaHeal} ~onDamaged 0.11
+  #------[Messages]--------
+  - sendtitle{title="&l<mob.name>";subtitle="&eWhat do you want from me...?";d=30;fi=15;fo=15} @PIR{r=25} =1800
+  - sendtitle{title="&l<mob.name>";subtitle="&eI do not understand...";d=30;fi=15;fo=15} @PIR{r=25} =1600
+  - sendtitle{title="&l<mob.name>";subtitle="&eWhy do you have a team...?";d=30;fi=15;fo=15} @PIR{r=25} =1400
+  - sendtitle{title="&l<mob.name>";subtitle="&eYou must already know...";d=30;fi=15;fo=15} @PIR{r=25} =1200
+  - sendtitle{title="&l<mob.name>";subtitle="&eWhat will happen to those...";d=30;fi=15;fo=15} @PIR{r=25} =1000
+  - sendtitle{title="&l<mob.name>";subtitle="&eThat trust eachother...";d=30;fi=15;fo=15} @PIR{r=25} =800
+  - sendtitle{title="&l<mob.name>";subtitle="&eI wonder if you will...";d=30;fi=15;fo=15} @PIR{r=25} =600
+  - sendtitle{title="&l<mob.name>";subtitle="&eOr have already experienced...";d=30;fi=15;fo=15} @PIR{r=25} =400
+  - sendtitle{title="&l<mob.name>";subtitle="&eBetrayal...";d=30;fi=15;fo=15} @PIR{r=25} =200
+  - sendtitle{title="&l<mob.name>";subtitle="&eBefore I perish I must ask...";d=30;fi=15;fo=15} @PIR{r=25} =150
+  - sendtitle{title="&l<mob.name>";subtitle="&eWhy do you ...";d=30;fi=15;fo=15} @PIR{r=25} =100
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:              
+  - GaiaHelmet:4
+  - diamond_chestplate:3
+  - diamond_leggings:2
+  - GaiaBoots:1
+  - stone_hoe:0          
+  Modules:
+    ThreatTable: true
+  Drops:
+  - nether_star 15-18 1
+  - redstone 100-300 1
+  - diamond 100-150 1
+  - gold_block 50-100 1
+  - exp 10000 1
+  - ViciousKey 1-2 1
+  - ViciousKey 1 0.1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 10
+    ShowHealth: true
+    Despawn: false
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.9
+AetherWalker:
+  Type: ZOMBIE
+  Display: '&dAether Walker'
+  Health: 150
+  Damage: 300
+  Armor: 2
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:              
+  - ReaperHelmet:4
+  - ReaperChestplate:3
+  - iron_leggings:2
+  - iron_boots:1
+  - dragon_egg:0          
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_ingot 1-3 1
+  - coal 1-5 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 10
+    ShowHealth: true
+    Despawn: false
+    MovementSpeed: 0.20
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.9
+AetherWidow:
+  Type: SPIDER
+  Display: '&dAether Widow'
+  Health: 100
+  Damage: 300
+  Armor: 3
+  Skills:
+  #------[Skills]--------
+  - skill{s=AetherWidowHit} ~onDamaged 
+  - skill{s=AetherPoison} ~onDamaged 0.15
+  #------[Summoning]--------
+  - summon{t=AetherWidowling;a=4} @Target ~onDeath
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged        
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_ingot 1-3 1
+  - coal 1-5 1
+  - iron_ingot 1-3 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 5
+    ShowHealth: true
+    Despawn: false
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.75
+AetherWidowling:
+  Type: CAVE_SPIDER
+  Display: '&dAether Widowling'
+  Health: 15
+  Damage: 300
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged        
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_ingot 1-3 1
+  - coal 1-5 1
+  - iron_ingot 1-3 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 10
+    ShowHealth: true
+    Despawn: false
+    MovementSpeed: 0.32
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.9
+AetherSpiderKing:
+  Type: SPIDER
+  Display: '&dAether Widow King'
+  Health: 800
+  Damage: 500
+  Skills:
+  #------[Skills]--------
+  - skill{s=AetherKingHit} @Self ~onDamaged
+  - skill{s=AetherPoison} @Target ~onDamaged 0.25
+  #------[Summoning]--------
+  - summon{t=AetherWidow;a=2} ~onDamaged 0.12
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged        
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_ingot 2-5 1
+  - coal 1-5 1
+  - iron_ingot 1-3 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 10
+    ShowHealth: true
+    Despawn: false
+    MovementSpeed: 0.21
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.9
+Soul:
+  Type: SKELETON
+  Display: '&bSoul'
+  Health: 50
+  Damage: 200
+  Skills:
+  #------[Skills]--------
+  - skill{s=SoulHit} @Self ~onDamaged
+  - healpercent{m=0.15} @Trigger ~onDeath
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged        
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_ingot 1-2 1
+  - coal 1-5 1
+  - iron_ingot 1-3 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 10
+    ShowHealth: true
+    Despawn: false
+    MovementSpeed: 0.21
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.9

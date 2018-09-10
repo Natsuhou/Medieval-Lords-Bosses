@@ -1,0 +1,80 @@
+Yeti:
+  Type: ZOMBIE
+  Display: '&cUndead Yeti'
+  Health: 1500
+  Damage: 500
+  Skills:
+  #------[Skills]--------
+  - skill{s=YetiHit} ~onDamaged
+  - skill{s=Blizzard} ~onDamaged 0.08
+  - skill{s=Slam} ~onDamaged 0.05
+  #------[Summoning]--------
+  - summon{t=UndeadSnowman;r=3} @PIR{r=15} ~onDamaged 0.03
+  #------[Messages]--------
+  - message{m="<mob.name>&f<&co> Who dares to disturb me!"} @PIR{r=15} =2300
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:    
+  - SoulHelmet:4
+  - SoulChestplate:3
+  - leather_leggings:2
+  - leather_boots:1
+  - snowball:0        
+  Modules:
+    ThreatTable: true
+  Drops:
+  - nether_star 4-6 1
+  - gold_ingot 35-45 1
+  - snow 15-30 1
+  - ice 35-45 1
+  - feather 15-25 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 7
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true
+UndeadSnowman:
+  Type: ZOMBIE
+  Display: '&aCursed Snowman'
+  Health: 150
+  Damage: 100
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:   
+  Equipment:    
+  - Pumpkin:4
+  - SoulChestplate:3
+  - leather_leggings:2
+  - leather_boots:1
+  - wood_sword:0                
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_ingot 3-5 1
+  AIGoalSelectors:
+  - 0 clear
+  - 1 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true
+    PreventSnowFormation: true

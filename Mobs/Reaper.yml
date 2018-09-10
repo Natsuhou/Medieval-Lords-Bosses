@@ -1,0 +1,272 @@
+Reaper:
+  Type: SKELETON
+  Display: '&cVengeful Spirit, Reaper'
+  Health: 500
+  Damage: 400
+  Armor: 15
+  Skills:
+  #------[Summoning]--------
+  - skill{s=ReaperDeath} ~onDeath
+  #------[Messages]--------
+  - message{m="<mob.name>&f<&co> I will get my revenge.."} @PIR{r=10} =300
+  - message{m="<mob.name>&f<&co> I'll &4DESTROY &fyou!"} @PIR{r=10} =100
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:            
+  - ReaperHelmet:4
+  - leather_chestplate:3
+  - gold_hoe:0            
+  Modules:
+    ThreatTable: true
+  Drops:
+  - nether_star 2-3 1
+  - gold_ingot 25-35 1
+  - bread 15-25 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.34
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventRandomDrops: true
+    PreventTeleport: true
+    FollowRange: 15
+    KnockbackResistance: 0.76
+    MaxCombatDistance: 5
+  DamageModifiers: 
+  - MAGIC 0.25
+  - PROJECTILE 0.25
+  - LAVA 0.15
+  - FALL 0.15
+  - LIGHTNING 0.155
+  - FIRE 0.25
+GrimReaper:
+  Type: SKELETON
+  Display: '&dSpirit Collector, Grim Reaper'
+  Health: 1500
+  Damage: 500
+  Armor: 8
+  Skills:
+  #------[Skills]--------
+  - skill{s=SoulCorrupt} ~onDamaged 0.12
+  - skill{s=SoulPull} ~onDamaged 0.15
+  - skill{s=SoulShatter} ~onDamaged 0.14
+  - skill{s=Mount} ~onDamaged 0.22
+  #------[Summoning]--------
+  - summon{t=HelWalker;a=2} @Self =1300
+  - summon{t=Demon;a=2} @Self =900
+  - summon{t=HelWalker;a=3} @Self =900
+  - summon{t=RDemon;a=4} @Self =500
+  - summon{t=Demon;a=2} @Self =500
+  - summon{t=Demon;a=3} @Self =200
+  - summon{t=RDemon;a=3} @Self =200
+  - summon{t=HelWalker;a=3} @Self =200
+  #------[Messages]--------
+  - message{m="<mob.name>&f<&co> &fDo you long for &8death&f?"} @PIR{r=10} =1300
+  - message{m="<mob.name>&f<&co> &fLet me &cdevour &fyour soul!"} @PIR{r=10} =900
+  - message{m="<mob.name>&f<&co> &fDo you feel the &4POWER &fof &4hell&f?"} @PIR{r=10} =500
+  - message{m="<mob.name>&f<&co> &4YOU WILL BE CONSUMED BY ME!"} @PIR{r=10} =200
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  - skill{s=OnHit} ~onDamaged
+  Equipment:
+  - ReaperHelmet:4
+  - ReaperChestplate:3
+  - ReaperLeggings:2
+  - ReaperBoots:1       
+  - stone_hoe:0                 
+  Modules:
+    ThreatTable: true
+  Drops:
+  - nether_star 7-15 1
+  - gold_ingot 128-135 1
+  - diamond_chestplate 1
+  - diamond 35-50 1
+  - redstone 150-200 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.32
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventRandomDrops: true
+    PreventTeleport: true
+    FollowRange: 15
+    MaxCombatDistance: 5
+RightHandOfHades:
+  Type: SKELETON
+  Display: '&5Right Hand of Hades, Reaper'
+  Health: 2000
+  Damage: 600
+  Skills:
+  #------[Skills]--------
+  - skill{s=RightHandOfHadesShadowStep} =2800
+  - skill{s=RightHandOfHadesShadowStep} =2200
+  - skill{s=RightHandOfHadesShadowStep} =2100
+  - skill{s=RightHandOfHadesShadowStep} =1700
+  - skill{s=RightHandOfHadesShadowStep} =1300
+  - skill{s=RightHandOfHadesShadowStep} =800
+  - skill{s=RightHandOfHadesShadowStep} =200
+  - heal{a=50} @self ~onAttack
+  - skill{s=SoulCorrupt} ~onDamaged 0.07
+  - skill{s=SoulPull} ~onDamaged 0.1
+  - skill{s=SoulShatter} ~onDamaged 0.09
+  - skill{s=Mount} ~onDamaged 0.08
+  #------[Summoning]--------
+  #------[Messages]--------
+  - message{m="<mob.name>&f<&co> Who dares to call me?"} @PIR{r=10} =2500
+  - message{m="<mob.name>&f<&co> You will forfeit your &clife&f!"} @PIR{r=10} =2000
+  - message{m="<mob.name>&f<&co> &8Death&f, calls to you!"} @PIR{r=10} =1500
+  - message{m="<mob.name>&f<&co> Who dares to call me?"} @PIR{r=10} =1000
+  - message{m="<mob.name>&f<&co> Who dares to call me?"} @PIR{r=10} =500
+  - message{m="<mob.name>&f<&co> Who dares to call me?"} @PIR{r=10} =200
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  - skill{s=OnHit} ~onDamaged
+  Equipment:  
+  - stone_hoe:0                      
+  Modules:
+    ThreatTable: true
+  Drops:
+  - nether_star 10-20 1
+  - gold_ingot 128-155 1
+  - redstone 150-200 1
+  - diamond 35-50 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.31
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventRandomDrops: true
+    PreventTeleport: true
+    FollowRange: 15
+    KnockbackResistance: 0.6
+    MaxCombatDistance: 5
+  DamageModifiers: 
+  - MAGIC 0.25
+  - PROJECTILE 0.35
+  - LAVA 0.1
+  - FALL 0.25
+  - LIGHTNING 0.15
+  - FIRE 0.25
+HelWalker:
+  Type: SKELETON
+  Display: '&cHel Walker'
+  Health: 150
+  Damage: 15
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:                        
+  Modules:
+    ThreatTable: true
+  Drops:
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventRandomDrops: true
+    PreventTeleport: true
+    FollowRange: 15
+    KnockbackResistance: 0
+    MaxCombatDistance: 5
+  DamageModifiers: 
+  - MAGIC 1.25
+  - PROJECTILE 3.5
+  - LAVA 1.1
+  - FALL 1.15
+  - LIGHTNING 1.5
+  - FIRE 1.5
+Demon:
+  Type: ZOMBIE
+  Display: '&cDemon'
+  Health: 150
+  Damage: 13
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:                        
+  Modules:
+    ThreatTable: true
+  Drops:
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventRandomDrops: true
+    PreventTeleport: true
+    FollowRange: 15
+    KnockbackResistance: 0.55
+    MaxCombatDistance: 5
+  DamageModifiers: 
+  - MAGIC 1.25
+  - PROJECTILE 3.5
+  - LAVA 1.1
+  - FALL 1.15
+  - LIGHTNING 1.5
+  - FIRE 1.5
+RDemon:
+  Type: ZOMBIE
+  Display: '&4Rutheless Demon'
+  Health: 300
+  Damage: 25
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:                        
+  Modules:
+    ThreatTable: true
+  Drops:
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.17
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventRandomDrops: true
+    PreventTeleport: true
+    FollowRange: 15
+    KnockbackResistance: 0.85
+    MaxCombatDistance: 5
+  DamageModifiers: 
+  - MAGIC 1.25
+  - PROJECTILE 3.5
+  - LAVA 1.1
+  - FALL 1.15
+  - LIGHTNING 1.5
+  - FIRE 1.5

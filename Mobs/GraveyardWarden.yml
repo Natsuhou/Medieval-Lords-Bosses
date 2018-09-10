@@ -1,0 +1,70 @@
+GraveyardWarden:
+  Type: SKELETON
+  Display: '&aGraveyard Warden'
+  Health: 150
+  Damage: 150
+  Skills:
+  #------[Messages]--------
+  - message{m="<mob.name>&f<&co> &fThis is only the beginning!"} @PIR{r=8} ~onDeath
+  #------[LifeandDeath]--------
+  - skill{s=OnWardenDeath} ~onDeath
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:
+  - leather_leggings:2
+  - leather_boots:1
+  - iron_sword:0
+  Drops:
+  - redstone 5-8 1
+  - iron_ingot 1-5 1
+  - gold_ingot 3-5 1
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.28
+    MaxCombatDistance: 8
+    ShowHealth: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    FollowRange: 15
+MainGraveyardWarden:
+  Type: SKELETON
+  Display: "&aGraveyard Warden, Ehai"
+  Health: 500
+  Damage: 175
+  Skills:
+  #------[Messages]--------
+  - message{m="<mob.name>&f<&co> &fYou will pay for that, <trigger.name>&f!"} @Trigger =300
+  - cgdamage{damage=300} @Trigger =300
+  - skill{s=HB} ~onDamaged
+  Equipment:
+  - iron_helmet:4
+  - ReaperChestplate:3
+  - iron_shovel:0
+  Drops:
+  - redstone 25-30 0.65
+  - diamond 8-10 1
+  - bread 15-20 1 
+  - iron 25-30 1
+  - GraveDigger 1 0.1
+  - exp 150 1
+  - gold_ingot 13-15 1
+  - nether_star 1 0.35
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.29
+    MaxCombatDistance: 8
+    ShowHealth: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    FollowRange: 15
+    KnockbackResistance: 0.85
+  DamageModifiers: 
+  - PROJECTILE 0.35
+  - FIRE_TICK 1.3
+  - MAGIC 1.2

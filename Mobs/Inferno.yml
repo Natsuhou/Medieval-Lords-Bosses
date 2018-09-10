@@ -1,0 +1,144 @@
+Inferno:
+  Type: BLAZE
+  Display: '&aInferno'
+  Health: 500
+  Damage: 25
+  Skills:
+  #------[Skills]--------
+  - skill{s=OnAwoken} ~onDeath 
+  #------[Effects]--------
+  - effect:flames @Self
+  #------[Messages]--------
+  - sendtitle{title="&l<mob.name>";subtitle="&cLeave this place...";d=30;fi=15;fo=15} @PIR{r=25} =350
+  - sendtitle{title="&l<mob.name>";subtitle="&cThis is your last warning...";d=30;fi=15;fo=15} @PIR{r=25} =100
+  - sendtitle{title="&l<mob.name>";subtitle="&cFine then...you will all perish";d=30;fi=15;fo=15} @PIR{r=25} =25
+  #------[HealthBar]--------
+  - skill{s=HB} @PIR{r=15} ~onDamaged
+  Equipment:
+  Modules:
+    ThreatTable: true
+  Drops:
+  - redstone 1-5 1
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.2
+    MaxCombatDistance: 10
+    PreventOtherDrops: false
+    ShowHealth: true
+InfernoUndying:
+  Type: BLAZE
+  Display: '&eInferno, The Flame'
+  Health: 2600
+  Damage: 200
+  Skills:
+  #------[Skills]--------
+  - skill{s=InfernoCharge} ~onDamaged >25% 0.11
+  - skill{s=HellDrag} @PIR{r=30} =2500
+  - skill{s=HellDrag} @PIR{r=30} =2300
+  - skill{s=HellDrag} @PIR{r=30} =1300
+  - skill{s=Heal} @Self =500
+  - skill{s=HellDrag} @PIR{r=30} =400
+  - skill{s=HellDrag} @Self =100
+  - skill{s=Heal} @Self =300
+  - skill{s=LavaHeal}
+  - skill{=InfernoBarrage} @PIR{r=25} =300
+  - skill{s=InfernoIgnite} ~onTimer:300 >25% @PIR{r=20}
+  - skill{s=InfernalBomb} =2400 @NearestPlayer
+  - skill{s=InfernalBomb} =1900 @PIR{r=15}
+  - skill{s=InfernalBomb} =1500 @PIR{r=15}
+  - skill{s=InfernalBomb} =900 @PIR{r=15}
+  - skill{s=InfernalBomb} =300 @PIR{r=15}
+  - skill{s=NetherMask} @Self ~onDamaged
+  - cgdamage{damage=300} @target ~onAttack
+  #------[Summoning]--------
+  - summon{type=InfernoAdds;amount=2;radius=4} @Self =2500 1
+  - summon{type=InfernoCube;amount=3;radius=3} @Self =1000 1
+  - summon{type=InfernoAdds;amount=4;radius=3} @Self =500 1
+  - summon{type=InfernoCube;amount=6;radius=4} @Self =300 1
+  #------[Messages]--------
+  - sendtitle{title="&l<mob.name>";subtitle="&cYou will all turn to ash...";d=30;fi=15;fo=15} @PIR{r=25} =2500
+  - sendtitle{title="&l<mob.name>";subtitle="&cThis is childs play...";d=30;fi=15;fo=15} @PIR{r=25} =2300
+  - sendtitle{title="&l<mob.name>";subtitle="&cYou cannot defeat me...";d=30;fi=15;fo=15} @PIR{r=25} =2000
+  - sendtitle{title="&l<mob.name>";subtitle="&cRain hell upon them destroy them...";d=30;fi=15;fo=15} @PIR{r=25} =1700
+  - sendtitle{title="&l<mob.name>";subtitle="&cIs that all you have??";d=30;fi=15;fo=15} @PIR{r=25} =1100
+  - sendtitle{title="&l<mob.name>";subtitle="&cYou will never defeat me...";d=30;fi=15;fo=15} @PIR{r=25} =800
+  - sendtitle{title="&l<mob.name>";subtitle="&cNo, this CANNOT be!";d=30;fi=15;fo=15} @PIR{r=25} =500
+  - sendtitle{title="&l<mob.name>";subtitle="&cTHIS WILL NOT BE THE END";d=30;fi=15;fo=15} @PIR{r=25} =300
+  #------[Effects]--------
+  - effect:flames @Self ~onDamaged
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Modules:
+    ThreatTable: true
+  Drops:
+  - nether_star 4-5 1
+  - diamond 15-20 1
+  - redstone 64-128 1
+  - gold_ingot 45-64 1
+  - iron_ingot 35-64 1
+  - blaze_rod 15-20 1
+  - ViciousKey 1 0.7
+  - ViciousKey 1 0.1
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.23
+    MaxCombatDistance: 15
+    ShowHealth: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+InfernoAdds:
+  Type: BLAZE
+  Display: '&aInferno''s Minions'
+  Health: 300
+  Modules:
+    ThreatTable: true
+  Damage: 22
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  #------[Skills]--------
+  Drops:
+  - blaze_rod 1-2 1
+  - gold_ingot 3-4 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+InfernoCube:
+  Type: MAGMA_CUBE
+  Display: '&eShard of Inferno''s Soul'
+  Health: 200
+  Modules:
+    ThreatTable: true
+  Damage: 10
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  #------[Skills]--------
+  Drops:
+  - gold_ingot 2-3 1
+  - diamond 1-2 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 5
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 

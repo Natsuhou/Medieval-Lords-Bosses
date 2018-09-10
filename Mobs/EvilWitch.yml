@@ -1,0 +1,110 @@
+EvilWitch:
+  Type: WITCH
+  Display: '&eEvil Witch, Oilah'
+  Health: 1500
+  Damage: 20
+  Skills:
+  #------[Skills]--------
+  - cgdamage{damage=255} @Target ~onDamaged 0.35
+  - skill{s=DeathDeath} =100
+  - skill{s=Poison} ~onDamaged 0.10
+  - skill{s=Corruption} ~onDamaged 0.09
+  #------[Messages]--------
+  - message{m="<mob.name>&f<&co> &fDo you feel the &0evil &fyet?"} =1300
+  - message{m="<mob.name>&f<&co> &fDo you hear the &4demons &fcalling your name?"} =900
+  - message{m="<mob.name>&f<&co> &fOh... it seems &4THEY &fare here"} =400
+  - message{m="<mob.name>&f<&co> &4DeaTh&f, &fDEAtH, DEATH!!!"} =100
+  #------[HealthBar]-------- 
+  - skill{s=HB} ~onDamaged
+  #------[Summoning]--------
+  - summon{t=DeadlySpider;a=2} @Self =1300
+  - summon{t=DeadlySpider;a=4} @Self =900
+  - summon{t=VengefulSpirit;a=4} @Self =400
+  - summon{t=DeadlySpider;a=4} @Self =100
+  - summon{t=VengefulSpirit;a=2} @Self =100
+  Equipment:                        
+  Modules:
+    ThreatTable: true
+  Drops:
+  - nether_star 3-4 1
+  - iron_ingot 35-50 1
+  - diamond_helmet 1 1
+  - diamond 25-30 1
+  - gold_ingot 55-64 1
+  - redstone 128-250 1
+  - glistering_melon 15-25 1
+  - gunpowder 20-35 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.27
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true
+VengefulSpirit:
+  Type: SKELETON
+  Display: '&eVengeful Spirit'
+  Health: 350
+  Damage: 100
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:                 
+  - leather_leggins:2
+  - leather_boots:1
+  - stone_sword:0       
+  Modules:
+    ThreatTable: true
+  Drops:
+  - diamond 1-5 1
+  - iron_ingot 1-15 1
+  - gold_ingot 1-15 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    KnockbackResistance: 0.75
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true
+DeadlySpider:
+  Type: SPIDER
+  Display: '&aVenomous Spider'
+  Health: 100
+  Damage: 100
+  Skills:
+  - potion{t=POISON;d=150;l=1} @Target ~onDamaged 0.25
+  #------[Skills]--------
+  #------[Summoning]--------
+  #------[Messages]--------
+  #------[HealthBar]--------
+  - skills{s=HB} ~onDamaged
+  Equipment:                        
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_nugget 1-5 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true
+
+

@@ -1,0 +1,113 @@
+GreyDemon:
+  Type: WITHER_SKELETON
+  Display: '&eGrey Demon'
+  Health: 800
+  Damage: 300
+  Skills:
+  #------[Messages]--------
+  - message{m="<mob.name>&f<&co> Do you &8&kunderstand&f?"} @PIR{r=15} =750
+  - message{m="<mob.name>&f<&co> Can you &8&khear &fme?"} @PIR{r=15} =400
+  - message{m="<mob.name>&f<&co> Oh... I see"} @PIR{r=15} =400
+  - message{m="<mob.name>&f<&co> You are too weak to &8&kcomprehend &fme..."} @PIR{r=15} =200
+  #------[Effects]--------
+  #------[LifeandDeath]--------
+  - cgdamage{damage=300} @PIR{r=15} ~onDeath
+  - message{m="<mob.name>&f<&co> We will meet again..."} @PIR{r=15} ~onDeath
+  #------[Skills]--------
+  - skill{s=SummonSod} ~onDamaged 0.03
+  - skill{s=SummonAdhuchas} ~onDamaged 0.05
+  - skill{s=GreyHeal} ~onDamaged 0.03
+  - skill{s=Punish} ~onDamaged 0.08
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:
+  - GaiaHelmet:4
+  - ReaperChestplate:3
+  - iron_sword:0
+  Modules:
+    ThreatTable: true
+  Drops:
+  - redstone 25-65 1
+  - gold_ingot 35-45 1
+  - nether_star 2 1
+  - iron_ingot 30-35 1
+  - diamond 10-12 1
+  - ViciousKey 1 0.1
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.28
+    MaxCombatDistance: 8
+    ShowHealth: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    FollowRange: 15
+Adhuchas:
+  Type: SKELETON
+  Display: "&aAdhuchas"
+  Health: 100
+  Damage: 100
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:
+  - iron_helmet:4
+  - ReaperChestplate:3
+  - iron_shovel:0
+  Modules:
+    ThreatTable: true
+  Drops:
+  - redstone 5-20 0.65
+  - gold_ingot 1-3 1
+  - bread 15-20 1 
+  - iron 15-20 1
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.23
+    MaxCombatDistance: 8
+    ShowHealth: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    FollowRange: 8
+    KnockbackResistance: 0.85
+  DamageModifiers: 
+  - PROJECTILE 0.35
+  - FIRE_TICK 1.3
+  - MAGIC 1.2
+Sod:
+  Type: SKELETON
+  Display: '&aSoul of the Damned'
+  Health: 85
+  Damage: 150
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:
+  - ReaperHelmet:4
+  - leather_chestplate:3
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_ingot 1-5 1
+  - exp 5 1
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.28
+    MaxCombatDistance: 8
+    ShowHealth: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    FollowRange: 15
+    KnockbackResistance: 0.85
+  DamageModifiers: 
+  - PROJECTILE 0.35
+  - FIRE_TICK 1.3
+  - MAGIC 1.2

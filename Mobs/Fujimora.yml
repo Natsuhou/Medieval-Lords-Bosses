@@ -1,0 +1,207 @@
+Fujimora:
+  Type: ZOMBIE
+  Display: '&5Fujimora Pantsu'
+  Health: 1500
+  Damage: 850
+  Disguise:
+    Type: skeleton
+  Armor: 5
+  Modules:
+    ThreatTable: true
+  Drops:
+  - RapierOfUnfairness 1 0.1
+  - nether_star 10-15 1
+  - redstone 64-128 1 
+  - diamond 23-32 1 
+  - speckled_melon 23-40 1
+  - gold_ingot 45-50 1
+  - gunpowder 25-30 1
+  - glowstone 32 1
+  - iron_ingot 23-45 1
+  - bone 1 0.3
+  - ViciousKey 1 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 3
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.32
+    PreventMobKillDrops: true
+    KnockbackResistance: 1
+  DamageModifiers:
+  - PROJECTILE 0.40
+  Equipment:
+  - fujimoraweapon:0
+  - diamond_helmet:4
+  - diamond_chestplate:3
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  #------[Messages]--------
+  - sendtitle{title="&4Fujimora Pantsu";subtitle="&eThis is your only warning, leave!";d=30;fi=15;fo=15} @PIR{r=25} =1400 1.0 
+  - sendtitle{title="&4Fujimora Pantsu";subtitle="&eIf you will not leave, I WILL TAKE ACTION!";d=30;fi=15;fo=15} @PIR{r=25} =1200 1.0 
+  - sendtitle{title="&4Fujimora Pantsu";subtitle="&eIs that all you have?!";d=30;fi=15;fo=15} @PIR{r=25} =1000 1.0 
+  - sendtitle{title="&4Fujimora Pantsu";subtitle="&eYou are weak..";d=30;fi=15;fo=15} @PIR{r=25} =1000 1.0 
+  - sendtitle{title="&4Fujimora Pantsu";subtitle="&eThis is the end...";d=30;fi=15;fo=15} @PIR{r=25} =700 1.0 
+  - sendtitle{title="&4Fujimora Pantsu";subtitle="&cKill them all...general!";d=30;fi=15;fo=15} @PIR{r=25} =300 1.0 
+  - message{m="<mob.name> &8has been killed by &e<trigger.name>"} ~onDeath @PlayersOnServer
+  #------[Effects]--------
+  - effect:firework{t=1;colors=DF0174;d=0} @Self =1400 1.0
+  - effect:firework{t=1;colors=FF0000;d=0} @Self =1200 1.0
+  - effect:firework{t=1;colors=5882FA;d=0} @Self =1000 1.0
+  - effect:firework{t=1;colors=FF5555;d=0} @Self =1000 1.0
+  - effect:firework{t=1;colors=00FF00;d=0} @Self =700 1.0
+  - effect:firework{t=1;colors=00FF00;d=0} @PIR =700 1.0
+  - effect:firework{t=1;colors=DF0174;d=0} @Self =300 1.0
+  - effect:firework{t=1;colors=DF0174;d=0} @PIR =300 1.0
+  #------[Skills]--------
+  - summon{t=Samurai;a=1;r=5;os=true} @Origin ~onCombat =1400 1.0
+  - summon{t=Ryokan;a=1;r=5;os=true} @Origin ~onCombat =1200 1.0
+  - summon{t=Samurai;a=1;r=5;os=true} @Origin ~onCombat =1200 1.0
+  - summon{t=Ryokan;a=2;r=5;os=true} @Origin ~onCombat =1000 1.0
+  - summon{t=Samurai;a=1;r=5;os=true} @Origin ~onCombat =1000 1.0
+  - summon{t=Daimyo;a=1;r=5;os=true} @Origin ~onCombat =1000 1.0
+  - summon{t=Daimyo;a=1;r=5;os=true} @Origin ~onCombat =700 1.0
+  - summon{t=Ryokan;a=2;r=5;os=true} @Origin ~onCombat =700 1.0
+  - summon{t=Daimyo;a=1;r=5;os=true} @Origin ~onCombat =300 1.0
+  - summon{t=Ryokan;a=2;r=5;os=true} @Origin ~onCombat =300 1.0
+  - summon{t=SamuraiGeneral;a=1;r=5;os=true} @Origin ~onCombat =300 1.0 
+Samurai:
+  Type: ZOMBIE
+  Display: '&aSamurai'
+  Health: 150
+  Damage: 400
+  Disguise:
+    Type: skeleton
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 5
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.25
+  Modules:
+  - ThreatTable: True
+  Drops:
+  - gold_ingot 3-5 1
+  - redstone 5-7 1
+  - diamond 4-7 1
+  DamageModifiers:
+  - PROJECTILE 0.40
+  Equipment:
+  - iron_helmet:4
+  - gold_chestplate:3
+  - iron_leggings:2
+  - iron_boots:1
+  - iron_sword:0
+  Skills:
+  - skill{s=HB} ~onDamaged
+Ryokan:
+  Type: SKELETON
+  Display: '&aRyokan'
+  Health: 100
+  Damage: 400
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.32
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.75
+  Modules:
+  - ThreatTable: True
+  Drops:
+  - 331 15 1  
+  - 265 5-9 1
+  - 370 1-5 0.4
+  DamageModifiers:
+  - PROJECTILE 0.40
+  Equipment:
+  - iron_helmet:4
+  - iron_chestplate:3
+  - iron_leggings:2
+  - bow:0
+  Skills:
+  - skill{s=HB} ~onDamaged
+Daimyo:
+  Type: ZOMBIE
+  Display: '&eDaimyo Iroka'
+  Health: 150
+  Damage: 400
+  Disguise:
+    Type: skeleton
+  Options:
+    PreventOtherDrops: True
+    PreventRandomEquipment: True
+  Drops:
+  - nether_star 1 0.1
+  - redstone 15 1  
+  - 289 7-10 1
+  - cake 1-4 0.5
+  - cookie 1 0.7
+  - diamond 10-12
+  DamageModifiers:
+  - PROJECTILE 0.40
+  Equipment:
+  - gold_helmet:4
+  - diamond_chestplate:3
+  - iron_leggings:2
+  - iron_sword:0
+  Skills:
+  - skill{s=HB} ~onDamaged 
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 10
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.28
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.55
+SamuraiGeneral:
+  Type: ZOMBIE
+  Display: '&cSamurai General, Quindishi'
+  Health: 400
+  Damage: 750
+  Disguise:
+    Type: skeleton
+  Options:
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventMobKillDrops: true
+  Drops:
+  - 399 1 3
+  - diamond 5-8 1
+  - redstone 10-25 1
+  - gold_ingot 8-12 1
+  DamageModifiers:
+  - PROJECTILE 0.40
+  Equipment:
+  - gold_helmet:4
+  - iron_chestplate:3
+  - diamond_leggings:2
+  - fujimoraweapon:0
+  Skills:
+  - skill{s=HB} ~onDamaged
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.32
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.85

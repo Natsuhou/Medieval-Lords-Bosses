@@ -1,0 +1,41 @@
+UndeadMiner:
+  Type: SKELETON
+  Display: '&8Undead Miner'
+  Health: 65
+  Damage: 12
+  Skills:
+  #------- [Skills] -------
+  - damage{a=6} ~onDamaged 0.11
+  #------- [Summon] -------
+  #------- [HealthBar] -------
+  - skill{s=HB} ~onDamaged
+  Equipment:      
+  - diamond_helmet:4
+  - iron_chestplate:3
+  - iron_pickaxe:0                      
+  Modules:
+    ThreatTable: true
+  Drops:
+  - diamond 1-3 0.22
+  - iron_ingot 1-5 0.5
+  - gold_ingot 1-2 0.35
+  - stone 1-2 1
+  - coal 1-3 0.27
+  - gunpowder 1-3 1
+  - iron_pickaxe 1
+  - iron_shovel 1
+  - iron_helmet 0.5
+  - redstone 3-5 0.45
+  - exp 15-20 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    PreventOtherDrops: true
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.26
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true

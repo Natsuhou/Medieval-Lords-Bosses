@@ -1,0 +1,26 @@
+SludgeMonster:
+  Type: SLIME
+  Display: '&8Sludge Monster'
+  Health: 80
+  Damage: 10
+  Skills:
+  #------- [Skills] -------
+  - potion{t=POISON;d=75;l=1} @PIR{r=5} ~onAttack 0.25
+  - potion{t=SLOW;d=75;l=1} @Target ~onAttack 1
+  #------- [Summon] -------
+  #-------[HealthBar]-------
+  - skill{s=HB} ~onDamage
+  Equipment:                            
+  Modules:
+    ThreatTable: true
+  Drops:
+  - slime_ball 4-8 1
+  - gold_nugget 5-8
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    Size: 4
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.23
+    PreventOtherDrops: true

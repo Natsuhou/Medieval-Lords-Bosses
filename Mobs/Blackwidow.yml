@@ -1,0 +1,34 @@
+Blackwidow:
+  Type: SPIDER
+  Display: '&8Blackwidow'
+  Health: 55
+  Damage: 10
+  Skills:
+#------[Skills]--------
+  - skill{s=Poison} @Target ~onDamage 0.15
+#------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:                        
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_ingot 1-3 1
+  - bread 1-4 1
+  - spider_eye 3-5 1
+  - exp 25 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true
+  DamageModifiers: 
+  - PROJECTILE 0.45
+  - FIRE_TICK 1.8
+  - MAGIC 1.9

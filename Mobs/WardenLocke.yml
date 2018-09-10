@@ -1,0 +1,121 @@
+WardenLocke:
+  Type: ZOMBIE
+  Display: '&cPrison Warden, Locke'
+  Health: 2000
+  Damage: 16
+  Options:
+    PreventOtherDrops: True
+    PreventRandomEquipment: True
+    MovementSpeed: 0.33
+    KnockbackResistance: 0.76
+  Modules:
+    ThreatTable: true
+  Drops:
+  - nether_star 3-4 1
+  - gold_ingot 15-45 1
+  - diamond 25 1
+  - redstone 64-128 1
+  - bread 30 1
+  - speckled_melon 5-10 1
+  - gunpowder 5-12 1
+  - 373:16389 5 .7
+  - WardenClub 1 0.5
+  DamageModifiers:
+  - PROJECTILE 0.60
+  Equipment:
+  - gold_helmet:4
+  - iron_chestplate:3
+  - leather_leggings:2
+  - leather_boots:1
+  - stick:0
+  Skills:
+  #------( Skills )--------
+  - summon{t=JuniorGuard;a=3;r=3;os=true} @Origin ~onCombat =1550 1.0
+  - summon{t=JuniorGuard;a=2;r=3;os=true} @Origin ~onCombat =1400 1.0
+  - summon{t=SeniorGuard;a=1;r=3;os=true} @Origin ~onCombat =1400 1.0
+  - summon{t=JuniorGuard;a=3;r=3;os=true} @Origin ~onCombat =1200 1.0
+  - summon{t=SeniorGuard;a=1;r=3;os=true} @Origin ~onCombat =1200 1.0
+  - summon{t=SeniorGuard;a=2;r=3;os=true} @Origin ~onCombat =500 1.0
+  - summon{t=JuniorGuard;a=3;r=3;os=true} @Origin ~onCombat =500 1.0
+  - skill{s=Rampage} @Self ~onCombat =1000
+  #------( Skill Cooldown )--------
+  - skill{s=Implosion} >0 0.54
+  - skill{s=KillingSpree} >0 ~OnCombat 0.50
+  - potion{t=SLOW;d=200;l=1} @PIR{r=30} ~onCombat <500 0.05
+  - skill{s=GroundSlam} >0 0.85
+  - skill{s=Pull} >0 0.85
+  #------( Messages )--------
+  - message{m="<mob.name>&f<&co> Hey, be quiet inmates!"} @PIR{r=30} =1900 1.0
+  - message{m="<mob.name>&f<&co> Get back in your cell!"} @PIR{r=30} =1700 1.0
+  - message{m="<mob.name>&f<&co> GUARDS, teach these prisoners a lesson!"} @PIR{r=30} =1550 1.0
+  - message{m="<mob.name>&f<&co> You can run, but you can't hide!"} @PIR{r=30} =1200 1.0
+  - message{m="<mob.name>&f<&co> JUSTICE WILL BE SERVED!"} @PIR{r=30} =1000 1.0
+  - message{m="<mob.name>&f<&co> YOU WILL NOT DEFEAT ME!"} @PIR{r=30} =500 1.0
+  #------( Effects )--------
+  - effect:firework{t=0;colors=BE81F7;d=0} @Self =1900 1.0
+  - effect:firework{t=0;colors=F78181;d=0} @Self =1700 1.0
+  - effect:firework{t=0;colors=55FFFF;d=0} @PIR{r=30} =1550 1.0
+  - effect:firework{t=0;colors=F78181;d=0} @Self =1550 1.0
+  - effect:firework{t=0;colors=F78181;d=0} @Self =1550 1.0
+  - effect:firework{t=0;colors=D0FA58;d=0} @Self =1200 1.0
+  - effect:firework{t=0;colors=55FFFF;d=0} @PIR{r=30} =1200 1.0
+  - effect:firework{t=0;colors=F78181;d=0} @Self =500 1.0
+  - effect:firework{t=0;colors=F78181;d=0} @PIR{r=30} =500 1.0
+  #------( Base )--------
+  - damage{a=15} ~onAttack @target
+  #------( HealthBar )--------
+  - skill{s=HB} ~onDamaged
+JuniorGuard:
+  Type: BABY_ZOMBIE
+  Display: '&aJunior Guard'
+  Health: 170
+  Damage: 20
+  BossBar:
+    Enabled: false
+  Options:
+    PreventOtherDrops: True
+    PreventRandomEquipment: True
+  Modules:
+    ThreatTable: true
+  Drops:
+  - 399 1 0.1
+  - iron_ingot 3 1 
+  - redstone 5 1
+  - gold_ingot 4 1
+  - diamond 3 1
+  Equipment:
+  - iron_helmet:4
+  - leather_chestplate:3
+  - iron_leggings:2
+  - iron_boots:1
+  - stick:0
+  Skills:
+  #------( HealthBar )--------
+  - skill{s=HB} ~onDamaged
+SeniorGuard:
+  Type: ZOMBIE
+  Display: '&eSenior Guard'
+  Health: 250
+  Damage: 25
+  BossBar:
+    Enabled: false
+  Options:
+    PreventOtherDrops: True
+    PreventRandomEquipment: True
+    MovementSpeed: 0.28
+  Modules:
+    ThreatTable: true
+  Drops:
+  - 399 1 0.1
+  - iron_ingot 5 1 
+  - redstone 10 1
+  - gold_ingot 9 1
+  Equipment:
+  - diamond_helmet:4
+  - iron_chestplate:3
+  - leather_leggings:2
+  - leather_boots:1
+  - stick:0
+  Skills:
+  #------( HealthBar )--------
+  - skill{s=HB} ~onDamaged

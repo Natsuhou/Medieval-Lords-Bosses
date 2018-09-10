@@ -1,0 +1,65 @@
+ESpiderQueen:
+  Type: SPIDER
+  Display: '&aSpider Queen'
+  Health: 400
+  Damage: 195
+  Skills:
+  #------[Skills]--------
+  - skill{s=SQBite} =200
+  - skill{s=Venom} =100
+  - summon{t=SpiderQueenChild;r=3} @Self ~onDamaged 0.08
+  #------[Messages]--------
+  - message{m="<mob.name>&f<&co> &fYou will regret that!"} @Target =200
+  - message{m="<mob.name>&f<&co> &fFeel the pain!"} @Target =100
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Drops:
+  - diamond 4-6 1
+  - redstone 6-10 1
+  - iron_ingot 1-10 1
+  - exp 150 1
+  - gold_ingot 12-15 1
+  - nether_star 1 0.35
+  - ViciousKey 1 0.15
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.26
+    MaxCombatDistance: 8
+    ShowHealth: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    FollowRange: 15
+    KnockbackResistance: 0.65
+  DamageModifiers: 
+  - PROJECTILE 0.35
+  - FIRE_TICK 1.3
+  - MAGIC 1.2
+SpiderQueenChild:
+  Type: CAVE_SPIDER
+  Display: '&aSpiderling'
+  Health: 50
+  Damage: 55
+  Skills:
+  #------[Skills]--------
+  - skill{s=SQBite} =200
+  - skill{s=Venom} =100
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Drops:
+  - gold_ingot 1-3 1
+  - exp 10 1
+  Options:
+    AlwaysShowName: true
+    MovementSpeed: 0.34
+    MaxCombatDistance: 8
+    ShowHealth: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    FollowRange: 15
+    KnockbackResistance: 0.66

@@ -1,0 +1,125 @@
+FrostGiant:
+  Type: GIANT
+  Display: '&cFrost Giant, Skaovi'
+  Health: 3000
+  Damage: 800
+  Skills:
+  #------- [Base Stats] -------
+  - potion{t=SLOW;d=70;l=0} @Target ~onAttack 0.4
+  - potion{t=POISON;d=50;l=1} @PIR{r=15} ~onDamaged 0.35
+  #------- [Skills] -------
+  - skill{s=IceAge} @PIR{r=25} =250
+  - skill{s=OnHitEffect} ~onDamaged
+  #------- [Summon] -------
+  - summon{t=FrostGiantFlesh;a=3} @Self =2500
+  - summon{t=FrostGiantFlesh;a=3} @Self =2000
+  - summon{t=FrostGiantFlesh;a=3} @Self =1500
+  - summon{t=FrostGiantFlesh;a=3} @Self =1000
+  - summon{t=FrostGiantWarrior;a=3} @Self =1000
+  #------- [% Skills] -------
+  - skill{s=FrozenPull} @Target ~onDamaged 0.03
+  - skill{s=FrozenQuake} @Target ~onDamaged 0.1
+  - skill{s=FrozenHell} @Target ~onDamaged 0.05
+  #------- [HeatlhBar] -------
+  - skill{s=HB} ~onDamage
+  Equipment:                            
+  - diamond_helmet:4
+  - diamond_chestplate:3
+  - leather_leggings:2
+  - leather_boots:1
+  Modules:
+    ThreatTable: true
+  Drops:
+  - nether_star 5-7 1
+  - redstone 15-30 1
+  - gold_ingot 15-30 1
+  - bread 15-25 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 30
+    PreventOtherDrops: true
+    ShowHealth: true
+    Despawn: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    MovementSpeed: 0.15
+  DamageModifiers: 
+  - PROJECTILE 0.45
+  - FIRE_TICK 1.8
+  - MAGIC 1.9
+  AIGoalSelectors:
+  - 0 clear
+  - 1 movetowardstarget
+  - 2 meleeattack
+  AITargetSelectors:
+  - 0 clear
+  - 1 players
+
+FrostGiantFlesh:
+  Type: ZOMBIE
+  Display: '&eSkaovis Flesh'
+  Health: 250
+  Damage: 600
+  Modules:
+    ThreatTable: true
+  Skills:
+  - potion{t=SLOW;d=70;l=0} @Target ~onAttack 0.8
+  Equipment:
+  - iron_helmet:4
+  - iron_chestplate:3
+  - leather_leggings:2
+  - leather_boots:1
+  Drops:
+  - gold_nugget 1-5 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 30
+    PreventOtherDrops: true
+    ShowHealth: true
+    Despawn: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    MovementSpeed: 0.27
+  DamageModifiers: 
+  - PROJECTILE 0.85
+  - FIRE_TICK 1.2
+  - MAGIC 1.4
+
+FrozenWarrior:
+  Type: SKELETON
+  Display: '&aFallen Frozen Warrior'
+  Health: 75
+  Damage: 200
+  Modules:
+    ThreatTable: true
+  Skills:
+  - potion{t=SLOW;d=70;l=0} @Target ~onAttack 0.8
+  Equipment:
+  - diamond_helmet:4
+  - iron_chestplate:3
+  - iron_leggings:2
+  - leather_boots:1
+  - diamond_sword:0
+  Drops:
+  - gold_nugget 1 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 30
+    PreventOtherDrops: true
+    ShowHealth: true
+    Despawn: true
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+  DamageModifiers: 
+  - PROJECTILE 0.55
+  - FIRE_TICK 1.5
+  - MAGIC 1.4

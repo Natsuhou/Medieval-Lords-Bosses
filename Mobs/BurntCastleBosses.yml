@@ -1,0 +1,576 @@
+#Outside the castle
+#RHAZZAD
+BurntCastleRhazzad:
+  Type: PIG_ZOMBIE
+  Display: '&cProtector of Fate, Rhazzad'
+  Health: 3000
+  Damage: 600
+  Skills:
+  - effect:flames @self ~onDamaged 0.3
+  - effect:itemspray{item=blaze_powder;amount=20;velocity=1;d=100;} @self ~onDamaged 0.1
+  - skill{skill=BurntCastleRhazzadFireballSkill} @target =550
+  - skill{skill=BurntCastleRhazzadFireballSkill} @target =450
+  - skill{skill=BurntCastleRhazzadFireballSkill} @target =350
+  - skill{skill=BurntCastleRhazzadFireballSkill} @target =250
+  - skill{skill=BurntCastleRhazzadFireballSkill} @target =150
+  - skill{skill=BurntCastleRhazzadFireballSkill} @target =50
+  - skill{s=HB} ~onDamaged
+  Drops:
+  - nether_star 2-4 1
+  - RandomCarbyneGear 1 0.5
+  - diamond 15-20 1
+  - gold_block 8-12 1
+  - ViciousKey 1 0.2
+  Equipment:
+  - BurntCastleRhazzadHelmet:4
+  - BurntCastleRhazzadChestplate:3
+  - BurntCastleRhazzadLeggings:2
+  - BurntCastleRhazzadBoots:1
+  - BurntCastleRhazzadSword:0
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.3
+    ShowHealth: true
+    MaxCombatDistance: 7
+    KnockbackResistance: 0.8
+    Angry: true
+#----------------------------------------------------------------------------------
+#Inside the castle
+#SPIDER QUEEN
+#----------------------------------------------------------------------------------
+SpellPlaguedDevourer:
+  Type: ZOMBIE
+  Display: '&cSpellplagued Devourer'
+  Health: 3000
+  Damage: 700
+  Modules:
+    ThreatTable: true
+  Skills:
+  #--------------------- Messages ----------------------
+  - sendtitle{title="&6&l<trigger.name>";subtitle="has killed the <mob.name>&f!";d=30;fi=15;fo=15} @Server ~onDeath
+  - sendtitle{title="&l<mob.name>";subtitle="&cDeath is the only way!";d=30;fi=15;fo=15} @PIR{r=25} =2500
+  - sendtitle{title="&l<mob.name>";subtitle="&cCan you hear it calling?";d=30;fi=15;fo=15} @PIR{r=25} =2000
+  - sendtitle{title="&l<mob.name>";subtitle="&cAAH! Look at me now.";d=30;fi=15;fo=15} @PIR{r=25} =1500
+  - sound{s=ambient.weather.thunder;v=5} @self =1500
+  - sendtitle{title="&l<mob.name>";subtitle="&6You will never defeat me!";d=30;fi=15;fo=15} @PIR{r=25} =1000
+  #---------------------- Skills ------------------------
+  - storm{type=BURST;color1=239,146,64;color2=230,244,34;radius=2;times=20} @self =1500
+  - potion{type=WITHER;duration=40;level=3} @PIR{r=20} =1500
+  - potion{type=WITHER;duration=40;level=3} @target =1800
+  - potion{type=WITHER;duration=40;level=3} @target =1100
+  - potion{type=WITHER;duration=40;level=3} @target =2000
+  - potion{type=WITHER;duration=40;level=3} @target =100
+  - effect:itemspray{item=redstone;amount=3;velocity=1;d=40;} @self ~onDamaged 1
+  - shadowstep @target =2800
+  - shadowstep @target =2200
+  - shadowstep @target =1700
+  - shadowstep @target =1400
+  - shadowstep @target =500
+  #--------------------------------------
+  - skill{s=HB} @trigger ~onDamaged
+  Equipment:
+  - torch:0
+  - iron_chestplate:3
+  - diamond_leggings:2
+  - gold_boots:1
+  Drops:
+  - RandomCarbyneGear 1 1
+  - RandomCarbyneGear 1-2 0.5
+  - 399:0 1 0.1
+  - ViciousKey 1 0.7
+  - ViciousKey 1 0.1
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.27
+    ShowHealth: true
+    KnockbackResistance: 0.7
+    MaxCombatDistance: 7
+BurntCastleOverseer:
+  Type: ZOMBIE
+  Display: '&cThe Overseer'
+  Health: 6000
+  Damage: 1100
+  Modules:
+    ThreatTable: true
+  Skills:
+  #--------------------- Messages ----------------------
+  - sendtitle{title="&l<mob.name>";subtitle="&cIt was a mistake coming here...";d=30;fi=15;fo=15} @PIR{r=25} =5950
+  - sound{s=ambient.weather.thunder;v=5} @self =5950
+  - sendtitle{title="&l<mob.name>";subtitle="&cI will enslave you...";d=30;fi=15;fo=15} @PIR{r=25} =5000
+  - sound{s=ambient.weather.thunder;v=5} @self =5000
+  - sendtitle{title="&l<mob.name>";subtitle="&cCan you feel my power??";d=30;fi=15;fo=15} @PIR{r=25} =4000
+  - sound{s=ambient.weather.thunder;v=5} @self =4000
+  - sendtitle{title="&l<mob.name>";subtitle="&cYou will die, alone!!";d=30;fi=15;fo=15} @PIR{r=25} =3200
+  - sound{s=ambient.weather.thunder;v=5} @self =3200
+  - sendtitle{title="&l<mob.name>";subtitle="&cDIEE!!!";d=30;fi=15;fo=15} @PIR{r=25} =2000
+  - sound{s=ambient.weather.thunder;v=5} @self =2000
+  #---------------------- Skills ------------------------
+  - summon{type=BurntCastleOverseerMinion;amount=1;radius=1} @self ~onSpawn
+  - summon{type=BurntCastleOverseerMinionS;amount=1;radius=1} @self ~onSpawn
+  - message{m="<mob.name>&a has been killed by &7<trigger.name>"} ~onDeath @PlayersOnServer
+  - potion{type=WITHER;duration=200;level=1} ~onAttack @Target
+  - potion{type=SLOW;duration=200;level=1} ~onAttack @Target
+  - potion{type=WEAKNESS;duration=200;level=1} ~onAttack @Target
+  - skill{s=OverseerTeleport} ~onSpawn
+  - effect:particles{p=lava;amount=3} @self ~onDamaged
+  #--------------------------------------
+  - pull{v=6;to=true} @PIR{r=20} @self =5550
+  - sendtitle{title="&l<mob.name>";subtitle="&cCome here!!";d=30;fi=15;fo=15} @PIR{r=25} =5550
+  - pull{v=6;to=true} @PIR{r=20} @self =4450
+  - pull{v=6;to=true} @PIR{r=20} @self =2550
+  - pull{v=6;to=true} @PIR{r=20} @self =1550
+  #--------------------------------------
+  - skill{s=OverseerFirstStorm} =4500
+  - skill{s=OverseerStorm} =4000
+  - skill{s=OverseerStorm} =3000
+  - skill{s=OverseerStorm} =2000
+  - skill{s=OverseerStorm} =1000
+  - skill{s=HB} @trigger ~onDamaged
+  Equipment:
+  - overseerWeapon:0
+  - overseerHelmet:4
+  - overseerChestplate:3
+  - overseerLeggings:2
+  - overseerBoots:1
+  Drops:
+  - RandomCarbyneGear 1 1
+  - RandomCarbyneGear 1-2 0.5
+  - 399:0 1 0.1
+  - ViciousKey 1 0.7
+  - ViciousKey 1 0.1
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.34
+    ShowHealth: true
+    KnockbackResistance: 0.7
+    MaxCombatDistance: 7
+#--------------------------------  
+BurntCastleQuaxis:
+  Type: WITHER_SKELETON
+  Display: '&cQuaxis the Soul Reaper'
+  Health: 6000
+  Modules:
+    ThreatTable: true
+  Damage: 800
+  Skills:
+  - sendtitle{title="&l<mob.name>";subtitle="&cI will take your soul!!";d=30;fi=15;fo=15} @PIR{r=25} =5950
+  - sound{s=ambient.weather.thunder;v=5} @self =5950
+  - potion{type=SLOW;duration=200;level=0} @target ~onAttack 0.3
+  - potion{type=BLINDNESS;duration=200;level=1} @target ~onAttack 0.3
+  - skill{s=QuaxisMount} =5000
+  - skill{s=QuaxisMount} =4000
+  - skill{s=QuaxisMount} =3000
+  - skill{s=QuaxisMount} =2000
+  - skill{s=QuaxisMount} =1000
+  - summon{type=BurntCastleQuaxisMinion;amount=2;radius=1} @self =5000
+  - summon{type=BurntCastleQuaxisSMinion;amount=2;radius=1} @self =5000
+  - sendtitle{title="&l<mob.name>";subtitle="&cRiiise!!";d=30;fi=15;fo=15} @PIR{r=25} =5000
+  - sound{s=ambient.weather.thunder;v=5} @self =5000
+  - summon{type=BurntCastleQuaxisMinion;amount=2;radius=1} @self =4000
+  - summon{type=BurntCastleQuaxisSMinion;amount=2;radius=1} @self =4000
+  - summon{type=BurntCastleQuaxisMinion;amount=2;radius=1} @self =3000
+  - summon{type=BurntCastleQuaxisSMinion;amount=2;radius=1} @self =3000
+  - effect:lightning @PIR{r=20} =5950
+  - cgdamage{damage=400} @PIR{r=20} =5950
+  - effect:lightning @PIR{r=20} =5000
+  - cgdamage{damage=400} @PIR{r=20} =5000
+  - effect:lightning @PIR{r=20} =4500
+  - cgdamage{damage=400} @PIR{r=20} =4500
+  - sendtitle{title="&l<mob.name>";subtitle="&cI will rip you apart..";d=30;fi=15;fo=15} @PIR{r=25} =4500
+  - sound{s=ambient.weather.thunder;v=5} @self =4500
+  - effect:lightning @PIR{r=20} =3000
+  - cgdamage{damage=400} @PIR{r=20} =3000
+  - effect:lightning @PIR{r=20} =1000
+  - cgdamage{damage=400} @PIR{r=20} =1000
+  - effect:lightning @PIR{r=20} =600
+  - cgdamage{damage=400} @PIR{r=20} =600
+  - message{m="<mob.name>&a has been killed by &7<trigger.name>"} ~onDeath @PlayersOnServer
+  - skill{s=HB} @trigger ~onDamaged
+  Equipment:
+  - QuaxisWeapon:0
+  - QuaxisHelmet:4
+  Drops:
+  - RandomCarbyneGear 1 1
+  - RandomCarbyneGear 1-2 0.5
+  - 399:0 10-20 1
+  - ViciousKey 1 0.7
+  - ViciousKey 1 0.1
+  Options:
+    AlwaysShowName: false
+    MovementSpeed: 0.3
+    KnockbackResistance: 0.8
+    ShowHealth: true
+    MaxCombatDistance: 7
+BurntCastleOverseerMinion:
+  Type: ZOMBIE
+  Display: ''
+  Health: 150
+  Damage: 50
+  Equipment:
+  - overseerMinionWeapon:0
+  - overseerMinionHelmet:4
+  - overseerMinionChestplate:3
+  - overseerMinionLeggings:2
+  - overseerMinionBoots:1
+  Skills:
+  - summon{type=BurntCastleOverseerMinion;amount=1;radius=1} @MIR{r=40;t=BurntCastleOverseer} ~onDeath
+  Drops:
+  Options:
+BurntCastleOverseerMinionS:
+  Type: SKELETON
+  Display: ''
+  Health: 150
+  Damage: 30
+  Equipment:
+  - overseerMinionSWeapon:0
+  - overseerMinionHelmet:4
+  - overseerMinionChestplate:3
+  - overseerMinionLeggings:2
+  - overseerMinionBoots:1
+  Skills:
+  - summon{type=BurntCastleOverseerMinionS;amount=1;radius=1} @MIR{r=40;t=BurntCastleOverseer} ~onDeath
+  Drops:
+  Options:
+    MovementSpeed: 0.25
+BurntCastleQuaxisMinion:
+  Type: ZOMBIE
+  Display: ''
+  Health: 150
+  Damage: 30
+  Equipment:
+  - quaxisMinionWeapon:0
+  - quaxisMinionHelmet:4
+  - quaxisMinionChestplate:3
+  - quaxisMinionLeggings:2
+  - quaxisMinionBoots:1
+  Skills:
+  Drops:
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 5
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.77
+BurntCastleQuaxisSMinion:
+  Type: SKELETON
+  Display: ''
+  Health: 150
+  Damage: 30
+  Equipment:
+  - quaxisMinionSWeapon:0
+  - quaxisMinionSHelmet:4
+  - quaxisMinionSChestplate:3
+  - quaxisMinionSLeggings:2
+  - quaxisMinionSBoots:1
+  Skills:
+  Drops:
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 5
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.65
+#----------------------------------------------------------------------------------------------------
+#THAYAN WITCH
+#----------------------------------------------------------------------------------------------------
+BurntCastleThayanWitch:
+  Type: WITCH
+  Display: '&dThayan Witch'
+  Health: 6000
+  Damage: 35
+  Skills:
+  - skill{skill=BurntCastleThayanWitchTNTSkill} =5500
+  - skill{skill=BurntCastleThayanWitchTNTSkill} =4500
+  - skill{skill=BurntCastleThayanWitchTNTSkill} =3500
+  - skill{skill=BurntCastleThayanWitchTNTSkill} =2500
+  - skill{skill=BurntCastleThayanWitchTNTSkill} =1500
+  - skill{skill=BurntCastleThayanWitchTNTSkill} =500
+  - skill{skill=BurntCastleThayanWitchTNTSkill} =3900
+  - skill{skill=BurntCastleThayanWitchTNTSkill} =2000
+  - skill{skill=BurntCastleThayanWitchTNTSkill} =1900
+  - shootpotion{type=HARM;duration=10;level=4;velocity=5} ~onTimer:130 @target
+  - skill{skill=BurntCastleThayanWitchIgniteSkill} ~onTimer:400
+  - cgdamage{damage=100} @PIR{r=15} ~onDamaged 0.3
+  #-------------------------- SUMMONS ---------------------------------
+  - summon{type=BurntCastleSpider;amount=1;radius=1} @PIR{r=15} ~onDamaged 0.08
+  - summon{type=Blackwidow;amount=3;radius=1} @PIR{r=15} =3500
+  - summon{type=Blackwidow;amount=3;radius=1} @PIR{r=15} =2500
+  - summon{type=Blackwidow;amount=3;radius=1} @PIR{r=15} =1500
+  - summon{type=Blackwidow;amount=3;radius=1} @PIR{r=15} =1000
+  #---------------------------------------------------------------------
+  - sendtitle{title="&l<mob.name>";subtitle="&7Ah, I've been expecting you";d=30;fi=15;fo=15} @PIR{r=25} =5500
+  - sendtitle{title="&l<mob.name>";subtitle="&7Enjoy my show...";d=30;fi=15;fo=15} @PIR{r=25} =4500
+  - sendtitle{title="&l<mob.name>";subtitle="&7Does this excite you?";d=30;fi=15;fo=15} @PIR{r=25} =3500
+  - sendtitle{title="&l<mob.name>";subtitle="&7Not enough? How about this!!";d=30;fi=15;fo=15} @PIR{r=25} =2500
+  - sendtitle{title="&l<mob.name>";subtitle="&7Not enough? How about this!!";d=30;fi=15;fo=15} @PIR{r=25} =1500
+  - sendtitle{title="&l<mob.name>";subtitle="&7Not enough? How about this!!";d=30;fi=15;fo=15} @PIR{r=25} =1000
+  - sendtitle{title="&6&l<trigger.name>";subtitle="has killed the <mob.name>&f!";d=30;fi=15;fo=15} @Server ~onDeath
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Drops:
+  - RandomCarbyneGear 1 1
+  - RandomCarbyneGear 1-2 0.5
+  - 399:0 1-2 0.1
+  - nether_star 10-11 1
+  - redstone 100-200 1
+  - gold_block 15-30 1
+  - glistering_melon 25-35 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 5
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.88
+BurntCastlePrimedTNT:
+  Type: TNT
+BurntCastleThayanWitchAdd:
+  Type: ZOMBIE
+  Health: 300
+  Armor: 5
+  Display: '&dSoul of the Damned'
+  Damage: 35
+  Skills:
+  - skill{s=BurntCastleThayanWitchAddCurse} ~onAttack @target 0.32
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Drops:
+  - gold_ingot 5-10 1
+  - diamond 7-8 1
+  - coal 1-7 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 5
+    ShowHealth: true
+    Despawn: false
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.80
+#----------------------------------------------------------------------------------------------------
+#AETHER KING ARTHUR
+#----------------------------------------------------------------------------------------------------
+AetherKingArthur:
+  Type: SKELETON
+  Display: '&5Aether King, Arthur'
+  Health: 6000
+  Damage: 30
+  Skills:
+  #------[Skills]--------
+  - skill{s=AetherHit} @Self ~onDamaged
+  #------[Summoning]--------
+  - skill{s=SummonAllies} @Self =3000
+  - summon{t=BurntCastleUndeadSkeleton} @PIR{r=15} ~onDamaged 0.15
+  - summon{t=BurntCastleUndeadZombie} @PIR{r=15} ~onDamaged 0.15
+  - summon{t=AetherDemon} @PIR{r=15} ~onDamaged 0.10
+  - summon{t=AetherDemon} @PIR{r=15} =300
+  #------[Messages]--------
+  - sendtitle{title="&l<mob.name>";subtitle="&dWho dares to challenge me!";d=30;fi=15;fo=15} @PIR{r=25} =5500
+  - sendtitle{title="&l<mob.name>";subtitle="&dYou will regret this!";d=30;fi=15;fo=15} @PIR{r=25} =5000
+  - sendtitle{title="&l<mob.name>";subtitle="&dTurn back before I...!";d=30;fi=15;fo=15} @PIR{r=25} =4500
+  - sendtitle{title="&l<mob.name>";subtitle="&dFine then...!";d=30;fi=15;fo=15} @PIR{r=25} =4000
+  - sendtitle{title="&l<mob.name>";subtitle="&dDeath will come to all!";d=30;fi=15;fo=15} @PIR{r=25} =3500
+  - sendtitle{title="&l<mob.name>";subtitle="&dFallen allies...RISE!";d=30;fi=15;fo=15} @PIR{r=25} =3000
+  - sendtitle{title="&l<mob.name>";subtitle="&dYou will be destroyed by ME!";d=30;fi=15;fo=15} @PIR{r=25} =2500
+  - sendtitle{title="&l<mob.name>";subtitle="&dHah, is that all you've got?!?";d=30;fi=15;fo=15} @PIR{r=25} =2000
+  - sendtitle{title="&l<mob.name>";subtitle="&dArg...that HURT!";d=30;fi=15;fo=15} @PIR{r=25} =1500
+  - sendtitle{title="&l<mob.name>";subtitle="&dI WILL NOT LOSE TO YOU!";d=30;fi=15;fo=15} @PIR{r=25} =1000
+  - sendtitle{title="&l<mob.name>";subtitle="&dNO, NO, NO!";d=30;fi=15;fo=15} @PIR{r=25} =500
+  - sendtitle{title="&l<mob.name>";subtitle="&dYOU WILL BE CONSUMED BY THE AETHER!!";d=30;fi=15;fo=15} @PIR{r=25} =300
+  - sendtitle{title="&6&l<trigger.name>";subtitle="has killed <mob.name>&f!";d=30;fi=15;fo=15} @Server ~onDeath
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:
+  - ArthurHelmet:4
+  - ArthurChestplate:3
+  - ArthurLeggings:2
+  - ArthurBoots:1
+  - iron_sword:0    
+  Drops: 
+  - nether_star 10-20 1
+  - redstone 64 1 
+  - diamond 23-32 1 
+  - speckled_melon 23-40 1
+  - gold_ingot 45-50 1
+  - gunpowder 32-40 1
+  - glowstone 32 1
+  - iron_ingot 23-45 1
+  - bone 1 0.3
+  - ViciousKey 1-3 1
+  - ViciousKey 1 0.1
+  Modules:
+    ThreatTable: true
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: false
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+    KnockbackResistance: 0.88
+AetherLancelot:
+  Type: SKELETON
+  Display: '&dAether Lancelot'
+  Health: 2000
+  Damage: 22
+  Skills:
+  #------[Summoning]--------
+  - summon{t=AetherKnight;a=1} @PIR{r=15} ~onDamaged 0.12 
+  #------[Messages]--------
+  - message{m="<mob.name>&f<&co> How dare you &cdisrespect &fLord Arthur!"} @PIR{r=15} =1500
+  - message{m="<mob.name>&f<&co> I will teach you &4lesson &for two!"} @PIR{r=15} =1000
+  - message{m="<mob.name>&f<&co> &4Die, dIE, DIE!"} @PIR{r=15} =500
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:    
+  - ReaperHelmet:4
+  - ArthurChestplate:3
+  - iron_leggings:2
+  - iron_boots:1
+  - iron_sword:0                  
+  Modules:
+    ThreatTable: true
+  Drops:
+  - nether_ingot 3-4 1
+  - diamond 15-20 1
+  - gold_block 10-20 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: false
+    MovementSpeed: 0.23
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+AetherMerlin:
+  Type: WITCH
+  Display: '&dCorrupted Mage, Merlin'  
+  Health: 2000
+  Damage: 25
+  Skills:
+  #------[Skills]--------
+  - damage{a=15} @Target ~onDamaged 0.15
+  - potion{type=WEAKNESS;d=200;l=2} ~onAttack @target 0.2
+  - potion{type=BLINDNESS;d=60;l=1} ~onAttack @target 0.1
+  - potion{type=SLOW;d=380;l=2} @target ~onAttack 0.3
+  - damage{a=15} @PIR{r=15} =500
+  #------[Messages]--------
+  - message{m="<mob.name>&f<&co> Do you feel &5bewitched&f!"} @PIR{r=15} =1500
+  - message{m="<mob.name>&f<&co> The &5Aether &fwill consume you!"} @PIR{r=15} =1000
+  - message{m="<mob.name>&f<&co> This is the &4END &fof your story!"} @PIR{r=15} =500
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged                        
+  Modules:
+    ThreatTable: true
+  Drops:
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: false
+    MovementSpeed: 0.25
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+AetherDemon:
+  Type: SKELETON
+  Display: '&8Aether Demon'  
+  Health: 200
+  Damage: 22
+  Skills:
+  #------[Skills]--------
+  - potion{type=BLINDNESS;duration=60;level=1} ~onAttack @target 0.1
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:            
+  - GaiaHelmet:4
+  - ReaperChestplate:3
+  - gold_leggings:2
+  - dragon_egg:0                     
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_ingot 1-5 1
+  - coal 1-5 1
+  - diamond 3-5 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: false
+    MovementSpeed: 0.28
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 
+AetherKnight:
+  Type: SKELETON
+  Display: '&5Aether Knight'  
+  Health: 150
+  Damage: 32
+  Skills:
+  #------[Skills]--------
+  - potion{type=BLINDNESS;duration=60;level=1} ~onAttack @target 0.1
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:            
+  - iron_helmet:4
+  - ReaperChestplate:3
+  - iron_leggings:2
+  - dragon_egg:0                     
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_ingot 1-5 1
+  - coal 1-5 1
+  - diamond 3-5 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.28
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true 

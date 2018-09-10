@@ -1,0 +1,64 @@
+SoulEater:
+  Type: SKELETON
+  Display: '&cSoul Eater'
+  Health: 1750
+  Damage: 200
+  Skills:
+  #------[Skills]--------
+  - skill{s=Force} ~onDamaged 0.09
+  - skill{s=SoulEat} ~onDamaged 0.06
+  - skill{s=Curse} ~onDamaged 0.09
+  - summon{t=Undead;r=3;a=1} ~onDamaged @PIR{r=15} 0.08
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment: 
+  - SoulHelmet:4
+  - SoulLeggings:2
+  - wood_sword:0                   
+  Modules:
+    ThreatTable: true
+  Drops:
+  - nether_star 4-6 1
+  - gold_ingot 35-40 1
+  - coal 35-45 1
+  - DeathSpite 1 0.11
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.3
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true
+    KnockbackResitance: 0.65
+Undead:
+  Type: SKELETON
+  Display: '&aUndead Corpse'
+  Health: 100
+  Damage: 100
+  Skills:
+  #------[HealthBar]--------
+  - skill{s=HB} ~onDamaged
+  Equipment:   
+  - leather_chestplate:3
+  - leather_leggings:2                 
+  Modules:
+    ThreatTable: true
+  Drops:
+  - gold_ingot 1 1
+  Options:
+    AlwaysShowName: true
+    MaxCombatDistance: 15
+    ShowHealth: true
+    Despawn: true
+    MovementSpeed: 0.22
+    PreventOtherDrops: true
+    PreventRandomEquipment: true
+    PreventRenaming: true
+    PreventItemPickup: true
+    PreventMobKillDrops: true
+    PreventTeleport: true
