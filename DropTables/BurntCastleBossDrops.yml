@@ -1,0 +1,99 @@
+BurntCastleRhazzadDrops:
+  Drops:
+  - 371:0 50-80 1
+  - exp 100 1
+  - BurntCastleRhazzadHelmet 1 0.13
+  - BurntCastleRhazzadChestplate 1 0.13
+  - BurntCastleRhazzadLeggings 1 0.13
+  - BurntCastleRhazzadBoots 1 0.13
+  - BurntCastleRhazzadSword 1 0.13
+  - 373:8259 1-2 1
+  - 373:16421 3-7 1
+  - 377:0 3-8 1
+  - 331:0 8-14 1
+  - 264:0 3-7 1
+  - 368:0 1-2 1
+  
+BurntCastleThayanWitchDrops:
+  Drops:
+  - exp 200 1
+  - 382:0 1-2 1
+  - 378:0 0-2 1
+  - 377:0 1-2 1
+  - 376:0 1-2 1
+  - 396:0 0-2 1
+  - 374:0 1-2 1
+  - 414:0 1-2 1
+  - 370:0 1-2 1
+  - 289:0 0-2 1
+  - 348:0 1-2 1
+  - 353:0 1-2 1
+  - 331:0 50-120 1
+  - 371:0 50-80 1
+  - 264:0 3-7 1
+  - 368:0 1-2 1
+  - GoldKey 1 0.3
+  - BewitchedBlade 1 0.25
+  #POTIONS
+  - 373:16421 3-7 1
+  - 373:8226 3-5 1
+  - 373:8259 3-4 1
+  - 373:16385 2-5 1
+  - 373:8201 3-4 1
+  
+BurntCastleSpiderQueenDrops:
+  Drops:
+  - 331:0 30-80 1
+  - exp 150 1
+  - 373:16421 3-7 1
+  - 373:8259 3-4 1
+  - 373:16385 2-5 1
+  - 371:0 50-80 1
+  - 264:0 3-7 1
+  - 368:0 1-2 1
+  - GoldKey 1 0.3
+  - DiamondKey 1 0.03
+  
+BurntCastleUndeadSkeleton:
+  Drops:
+  - exp 30 1
+  - 331:0 3-6 1
+  - 373:16421 0-2 0.5
+  - 373:16385 0-2 0.5
+  - 373:8227 0-1 0.2
+  - 373:8201 0-1 0.3
+BurntCastleSkeletonHorseRiderDrops:
+  Drops:
+  - exp 40 1
+  - 331:0 7-11 1
+  - 373:16421 0-2 0.8
+  - 373:16385 0-2 0.8
+  - 373:8227 0-1 0.5
+  - 373:8201 0-1 0.4
+
+BurntCastleUndeadEliteZombieDrops:
+  Drops:
+  - exp 40 1
+  - 331:0 7-11 1
+  - 373:16421 0-2 0.8
+  - 373:16385 0-2 0.8
+  - 373:8227 0-1 0.5
+  - 373:8201 0-1 0.4
+
+BurntCastleUndeadEliteSkeletonDrops:
+  Drops:
+  - exp 40 1
+  - 331:0 7-11 1
+  - 373:16421 0-2 0.8
+  - 373:16385 0-2 0.8
+  - 373:8227 0-1 0.5
+  - 373:8201 0-1 0.4
+
+BurntCastleSpiderDrops:
+  Drops:
+  - exp 30 1
+  - 331:0 3-6 1
+  - 373:16421 0-2 0.5
+  - 373:16385 0-2 0.5
+  - 373:8227 0-1 0.2
+  - 373:8201 0-1 0.3

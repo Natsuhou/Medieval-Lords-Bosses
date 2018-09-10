@@ -1,0 +1,92 @@
+FujiSword:
+  Id: 276
+  Data: 0
+  Display: '&4Rapier Of Unfairness'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DAMAGE_ALL:4
+  - LOOT_BONUS_MOBS:3
+  - DAMAGE_UNDEAD:2
+  - DURABILITY:5
+  - FIRE_ASPECT:1
+  Lore: 
+  - "&cThats pretty unfair, don't you think?"
+#  PotionEffects:
+#  BannerLayers:
+Gaia:
+  Id: 276
+  Data: 0
+  Display: '&aGaia Blade'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DAMAGE_ALL:5
+  - LOOT_BONUS_MOBS:1
+  - DAMAGE_UNDEAD:1
+  - DURABILITY:5
+  Lore: 
+  - "&aThe origin of all things living"
+#  PotionEffects:
+#  BannerLayers:
+DragonBlade:
+  Id: 276
+  Data: 0
+  Display: '&aDragon Blade'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DAMAGE_ALL:5
+  - LOOT_BONUS_MOBS:3
+  - DAMAGE_UNDEAD:4
+  - DURABILITY:5
+  - FIRE_ASPECT:2
+  - PROTECTION_ENVIRONMENTAL:4
+  Lore: 
+  - "&2The dragon becomes me!"
+#  PotionEffects:
+#  BannerLayers:
+HanzoBow:
+  Id: 261
+  Data: 0
+  Display: "&9Hanzo's Bow"
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - ARROW_DAMAGE:5
+  - DURABILITY:5
+  - ARROW_INFINITE:1
+  - ARROW_FIRE:3
+  - PROTECTION_FIRE:3
+  Lore: 
+  - "&bLet the dragon consume you!"
+#  PotionEffects:
+#  BannerLayers:
+MarvinsFood:
+  Id: 338
+  Data: 0
+  Display: '&2Celery'
+#  Attributes:
+  Amount: 1
+#  Options:
+  Enchantments:
+  - DAMAGE_ALL:5
+  - LOOT_BONUS_MOBS:3
+  - DAMAGE_UNDEAD:2
+  - DURABILITY:5
+  - FIRE_ASPECT:1
+  Lore: 
+  - "&aBWarning, choking hazard"
+#  PotionEffects:
+#  BannerLayers:
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+MobIngots:
+  Drops:
+  - 371:0 1-3 0.45
+MobIngotsRare:
+  Drops:
+  - 371:0 5-8 0.25
+BeginnerDrops:
+  Drops:
+  - 399:0 5 1
+  - 264:0 7 1
+  - 371:0 100 1
+  - ProtectionTwoDiamondH 1 1
+  - ProtectionTwoDiamondC 1 1
+  - ProtectionTwoDiamondL 1 1
+  - ProtectionTwoDiamondB 1 1
+  - SharpnessThreeDiamond 1 1
+  - MagicWand 1 1
+  - 331:0 32 1
