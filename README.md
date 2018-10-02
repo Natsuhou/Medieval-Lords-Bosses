@@ -1,5 +1,4 @@
 # Medieval Lords Bosses 
-Hi, I'm assuming that you're from the Medieval Lords minecraft server if you're here.
 
 ### Reason for this repository ###
 The reason I made this is for the future generations of the server who would like to contribute. 
@@ -11,4 +10,4 @@ with some of their skills, drops etc. The skills folder contains the more comple
 drops folder contains the drops of the bosses.
 
 ### How could I create a boss? ###
-I will create a file called "demo.json" which will show you how to create a boss. 
+https://www.mythicmobs.net/index.php
